@@ -1,71 +1,32 @@
-
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { TextInput } from 'react-native-web';
+import { Text, TouchableOpacity, View, ImageBackground, TextInput } from 'react-native';
+import fundoBranco from './assets/fundoBranco.png'
+import styles from './styles'; // importa os estilos de outro arquivo
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <View style={styles.tudinho}>
-      <Text style={styles.tituloLogin}>Login</Text>
-      <hr style={styles.hrs}></hr>
-      
-      <View>
+    <ImageBackground
+    source={fundoBranco}
+    style={styles.background}
+    resizeMode='cover'>
 
-      <View style={styles.inputs}>
+      <View style={styles.container}>
+        <Text style={styles.tituloLogin}>Login</Text>
+        <hr style={styles.hrs}></hr>
 
-      <Text style={styles.texto}>Matricula</Text>
-      <TextInput style={styles.input1} placeholder='Digite sua Matricula'></TextInput>
+        <View style={styles.inputs}>
+          <Text style={styles.texto}>Nome ou CPF</Text>
+          <TextInput style={styles.input1} placeholder="Digite seu nome completo" />
 
-      <Text style={styles.texto}>Senha</Text>
-      <TextInput style={styles.input1 } placeholder='Digite sua senha'></TextInput>
+          <Text style={styles.texto}>Senha</Text>
+          <TextInput style={styles.input1} placeholder="Digite sua senha" />
+        </View>
+
+        <TouchableOpacity style={styles.botaozinho}>
+          <Text style={styles.textodobotaozinho}>Botão Teste</Text>
+        </TouchableOpacity>
+
       </View>
 
-      </View>
-    </View>
-    </View>
+    </ImageBackground>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    // backgroundColor: "gray",
-    alignItems: 'center',
-    // justifyContent: 'center',
-    // height: 500
-  },
-
-  tudinho: {
-    // backgroundColor: "gray",
-    alignItems: 'center',
-    justifyContent: 'center',
-    // borderWidth: 2,
-    // borderRadius: 30,
-    height: 75,
-    padding: 10, 
-    marginTop: 250,
-  },
-
-  tituloLogin: {
-    fontSize: 55,
-  },
-
-  hrs: {
-    width: 50,
-  },
-
-  input1: {
-    // borderColor: "cyan",
-    // color: "cyan",
-    borderWidth: 1,
-    borderRadius: 30,
-    padding: 10, 
-    width: 350,
-    margin: 5,
-  },
-
-  inputs: {
-    padding: 10,
-  },
-
-});
