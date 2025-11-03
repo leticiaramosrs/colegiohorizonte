@@ -50,6 +50,6 @@ export default StyleSheet.create({
     padding: 20,
   },
   textodecima: {
-    fontSize: 40,
+    fontSize: 20,
   }
 });
