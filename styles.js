@@ -35,7 +35,7 @@ export default StyleSheet.create({
   },
 
   texto: {
-    
+    fontSize: 16,
   },
 
   inputs: {
@@ -51,5 +51,11 @@ export default StyleSheet.create({
   },
   textodecima: {
     fontSize: 20,
+  },
+  textodeadmin: {
+    fontSize: 18,
+    padding: 20,
+    color: '#0080FF',
+    textDecorationLine: 'underline',
   }
 });
