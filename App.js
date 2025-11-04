@@ -8,7 +8,7 @@ export default function App() {
         <Image style={styles.logo} source={ require('./assets/logoColegiocopia1.png')}></Image>
         <Text style={styles.textodecima}>Entre na sua conta de estudante </Text>
         <View style={styles.inputs}>
-          <Text style={styles.texto}>Nome completo</Text>
+          <Text style={styles.texto}>Nome compleaaaato</Text>
           <TextInput style={styles.input1} placeholder="Digite seu nome completo" />
 
           <Text style={styles.texto}>Matrícula</Text>
