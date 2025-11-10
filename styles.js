@@ -13,9 +13,7 @@ export default StyleSheet.create({
     padding: 10, 
     width: 350,
     margin: 5,
-
   },
-
 
   textodobotaozinho: {
     textAlign: "center",
@@ -44,14 +42,16 @@ export default StyleSheet.create({
   },
 
   logo: {
-    marginTop: 170,
+    marginTop: 130,
     width: 300,
     height: 300,
     padding: 20,
   },
+
   textodecima: {
     fontSize: 20,
   },
+
   textodeadmin: {
     fontSize: 18,
     padding: 20,
