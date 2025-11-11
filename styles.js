@@ -57,5 +57,17 @@ export default StyleSheet.create({
     padding: 20,
     color: '#0080FF',
     textDecorationLine: 'underline',
+  },
+  homenav: {
+    backgroundColor: 'pink',
+    width: 30
+  },
+  logo2: {
+    width: 70,
+    height: 70,
+  },
+  logoContainer:{
+    alignSelf:'flex-start',
+    padding: 10,
   }
 });

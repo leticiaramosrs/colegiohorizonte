@@ -14,23 +14,23 @@ export default function App() {
 
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen 
-          name="LoginComum" 
-          component={LoginComumScreen} 
-          options={{title: 'Tela Inicial'}}
-          />
+        <Stack.Screen
+          name="LoginComum"
+          component={LoginComumScreen}
+          options={{ title: 'Tela Inicial' }}
+        />
 
         <Stack.Screen
           name="LoginDeAdm"
           component={LoginadmScreen}
-          options={{title: 'Login Admin'}}
-          />
+          options={{ title: 'Login Admin' }}
+        />
 
         <Stack.Screen
           name="Home"
           component={HomeScreen}
-          options={{title: 'Home'}}
-          />
+          options={{ title: 'Home' }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
 
@@ -40,58 +40,62 @@ export default function App() {
 function LoginComumScreen({ navigation }) {
   return (
     <View style={styles.tudo}>
-    <Image style={styles.logo} source={ require('./assets/logoColegiocopia1.png')}></Image>
-    <Text style={styles.textodecima}>Entre na sua conta de estudante </Text>
-    <View style={styles.inputs}>
-      <Text style={styles.texto}>Nome completo</Text>
-      <TextInput style={styles.input1} placeholder="Digite seu nome completo" />
+      <Image style={styles.logo} source={require('./assets/logoColegiocopia1.png')}></Image>
+      <Text style={styles.textodecima}>Entre na sua conta de estudante </Text>
+      <View style={styles.inputs}>
+        <Text style={styles.texto}>Nome completo</Text>
+        <TextInput style={styles.input1} placeholder="Digite seu nome completo" />
 
-      <Text style={styles.texto}>Matrícula</Text>
-      <TextInput style={styles.input1} placeholder="Digite sua senha" />
+        <Text style={styles.texto}>Matrícula</Text>
+        <TextInput style={styles.input1} placeholder="Digite sua senha" />
+      </View>
+
+      <TouchableOpacity style={styles.botaozinho}
+        onPress={() => navigation.navigate("Home")}>
+        <Text style={styles.textodobotaozinho}>Entrar</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.contaadmin}
+        onPress={() => navigation.navigate("LoginDeAdm")}>
+        <Text style={styles.textodeadmin}>Entre na sua conta de Admin</Text>
+      </TouchableOpacity>
     </View>
-
-    <TouchableOpacity style={styles.botaozinho}
-    onPress={() => navigation.navigate("Home")}>
-      <Text style={styles.textodobotaozinho}>Entrar</Text>
-    </TouchableOpacity>
-
-    <TouchableOpacity style={styles.contaadmin}
-      onPress={() => navigation.navigate("LoginDeAdm")}>
-    <Text style={styles.textodeadmin}>Entre na sua conta de Admin</Text>
-    </TouchableOpacity>
-  </View>
   );
 }
 
 function LoginadmScreen({ navigation }) {
   return (
     <View style={styles.tudo}>
-    <Image style={styles.logo} source={ require('./assets/logoColegiocopia1.png')}></Image>
-    <Text style={styles.textodecima}>Entre na sua conta de estudante </Text>
-    <View style={styles.inputs}>
-      <Text style={styles.texto}>Nome de usuário</Text>
-      <TextInput style={styles.input1} placeholder="Digite o seu usuário" />
+      <Image style={styles.logo} source={require('./assets/logoColegiocopia1.png')}></Image>
+      <Text style={styles.textodecima}>Entre na sua conta de estudante </Text>
+      <View style={styles.inputs}>
+        <Text style={styles.texto}>Nome de usuário</Text>
+        <TextInput style={styles.input1} placeholder="Digite o seu usuário" />
 
-      <Text style={styles.texto}>Senha</Text>
-      <TextInput style={styles.input1} placeholder="Digite sua senha" />
-    </View>
+        <Text style={styles.texto}>Senha</Text>
+        <TextInput style={styles.input1} placeholder="Digite sua senha" />
+      </View>
 
-    <TouchableOpacity style={styles.botaozinho}
+      <TouchableOpacity style={styles.botaozinho}
         onPress={() => navigation.navigate("Home")}>
-      <Text style={styles.textodobotaozinho}>Entrar</Text>
-    </TouchableOpacity>
-    <TouchableOpacity style={styles.contaadmin}
-      onPress={() => navigation.navigate("LoginComum")}>
-    <Text style={styles.textodeadmin}>Entre na sua conta de Estudante</Text>
-    </TouchableOpacity>
-  </View>
+        <Text style={styles.textodobotaozinho}>Entrar</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.contaadmin}
+        onPress={() => navigation.navigate("LoginComum")}>
+        <Text style={styles.textodeadmin}>Entre na sua conta de Estudante</Text>
+      </TouchableOpacity>
+    </View>
   );
 }
 
 function HomeScreen({ navigation }) {
   return (
     <View style={styles.tudo}>
-    <Image style={styles.logo} source={ require('./assets/logoColegiocopia1.png')}></Image>
-  </View>
+      <View style={styles.logoContainer}>
+        <Image style={styles.logo2} source={require('./assets/logoColegiocopia1.png')} ></Image>
+      </View>
+      <View style={styles.homenav}> </View>
+    </View>
+
   );
 }
