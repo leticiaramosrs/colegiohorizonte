@@ -1,6 +1,10 @@
 import { Text, TouchableOpacity, View, TextInput, Image } from 'react-native';
 import styles from './styles'; // importa os estilos de outro arquivo
 import { FontAwesome } from '@expo/vector-icons';
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
+import Foundation from '@expo/vector-icons/Foundation';
+import Entypo from '@expo/vector-icons/Entypo';
+import Ionicons from '@expo/vector-icons/Ionicons';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -17,19 +21,19 @@ export default function App() {
         <Stack.Screen 
           name="LoginComum" 
           component={LoginComumScreen} 
-          options={{title: 'Tela Inicial'}}
+          options={{title: 'Tela Inicial', headerShown: false}}
           />
 
         <Stack.Screen
           name="LoginDeAdm"
           component={LoginadmScreen}
-          options={{title: 'Login Admin'}}
+          options={{title: 'Login Admin', headerShown: false}}
           />
 
         <Stack.Screen
           name="Home"
           component={HomeScreen}
-          options={{title: 'Home'}}
+          options={{title: 'Home', headerShown: false}}
           />
       </Stack.Navigator>
     </NavigationContainer>
@@ -40,13 +44,16 @@ export default function App() {
 function LoginComumScreen({ navigation }) {
   return (
     <View style={styles.tudo}>
+    <View style={styles.tudomenor}>
+    <View style={styles.atraslogin}>
     <Image style={styles.logo} source={ require('./assets/logoColegiocopia1.png')}></Image>
-    <Text style={styles.textodecima}>Entre na sua conta de estudante </Text>
+    </View>
+    <Text style={styles.textodecima}>Entre como estudante </Text>
     <View style={styles.inputs}>
-      <Text style={styles.texto}>Nome completo</Text>
-      <TextInput style={styles.input1} placeholder="Digite seu nome completo" />
+      <Text style={styles.texto}>Matricula</Text>
+      <TextInput style={styles.input1} placeholder="Digite sua matricula" />
 
-      <Text style={styles.texto}>Matrícula</Text>
+      <Text style={styles.texto}>Senha</Text>
       <TextInput style={styles.input1} placeholder="Digite sua senha" />
     </View>
 
@@ -57,8 +64,9 @@ function LoginComumScreen({ navigation }) {
 
     <TouchableOpacity style={styles.contaadmin}
       onPress={() => navigation.navigate("LoginDeAdm")}>
-    <Text style={styles.textodeadmin}>Entre na sua conta de Admin</Text>
+    <Text style={styles.textodeadmin}>Entre como Admin</Text>
     </TouchableOpacity>
+    </View>
   </View>
   );
 }
@@ -66,11 +74,14 @@ function LoginComumScreen({ navigation }) {
 function LoginadmScreen({ navigation }) {
   return (
     <View style={styles.tudo}>
+    <View style={styles.tudomenor}>
+    <View style={styles.atraslogin}>
     <Image style={styles.logo} source={ require('./assets/logoColegiocopia1.png')}></Image>
-    <Text style={styles.textodecima}>Entre na sua conta de estudante </Text>
+    </View>
+    <Text style={styles.textodecima}>Entre como admin</Text>
     <View style={styles.inputs}>
       <Text style={styles.texto}>Nome de usuário</Text>
-      <TextInput style={styles.input1} placeholder="Digite o seu usuário" />
+      <TextInput style={styles.input1} placeholder="Digite o seu nome de usuário" />
 
       <Text style={styles.texto}>Senha</Text>
       <TextInput style={styles.input1} placeholder="Digite sua senha" />
@@ -82,16 +93,50 @@ function LoginadmScreen({ navigation }) {
     </TouchableOpacity>
     <TouchableOpacity style={styles.contaadmin}
       onPress={() => navigation.navigate("LoginComum")}>
-    <Text style={styles.textodeadmin}>Entre na sua conta de Estudante</Text>
+    <Text style={styles.textodeadmin}>Entre como estudante</Text>
     </TouchableOpacity>
+    </View>
   </View>
   );
 }
 
 function HomeScreen({ navigation }) {
   return (
-    <View style={styles.tudo}>
-    <Image style={styles.logo} source={ require('./assets/logoColegiocopia1.png')}></Image>
+  <View style={styles.tudo}>
+     <Text style={styles.textoPromocoes}>Promoções <br/> cárdapio <br/> do dia</Text>
+        
+        <TouchableOpacity style={styles.bolaDePerfil}
+      onPress={() => navigation.navigate("LoginComum")}>
+          <Ionicons name="person-circle" size={50} color="black" style={styles.bolaDePerfil} />
+    </TouchableOpacity>
+
+  <View style={styles.barraNoCantoInferior}>
+
+  <TouchableOpacity style={styles.icones1}
+      onPress={() => navigation.navigate("LoginComum")}>
+         <FontAwesome6 name="house" size={34} color="black" style={styles.icones1}/>
+    </TouchableOpacity>
+
+    <TouchableOpacity style={styles.icones1}
+      onPress={() => navigation.navigate("compras")}>
+      <Foundation name="shopping-cart" size={40} color="black" style={styles.icones1}/>    
+    </TouchableOpacity>
+
+    <TouchableOpacity style={styles.icones1}
+      onPress={() => navigation.navigate("LoginComum")}>
+      <Entypo name="ticket" size={36} color="black" style={styles.icones1}/>
+    </TouchableOpacity>
+
+    <TouchableOpacity style={styles.icones1}
+      onPress={() => navigation.navigate("LoginComum")}>
+      <Ionicons name="settings-outline" size={36} color="black" style={styles.icones1}/>
+    </TouchableOpacity>
+
+    
+  </View>
   </View>
   );
+}
+function ComprasScreen({ navigation }) {
+
 }

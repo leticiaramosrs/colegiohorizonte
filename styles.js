@@ -1,61 +1,150 @@
 import { StyleSheet } from 'react-native';
 
+// Cores utilizadas:
+// rgb(244, 11, 93)
+// rgb(204, 11, 79)
+// rgb(255, 242, 249)
+// rgb(253, 206, 222)
+
 export default StyleSheet.create({
+
+  // ----- Containers principais -----
   tudo: {
-    backgroundColor: "white",
+    backgroundColor: "rgb(255, 255, 255)",
+    // backgroundColor: "rgb(240, 240, 240)",
     flex: 1,
     alignItems: 'center',
   },
 
+  // tudomenor: {
+  //   flex: 1,
+  //   backgroundColor: "rgb(253, 206, 222)",
+  //   alignItems: 'center',
+  //   justifyContent: 'center',
+  //   marginTop: -100,
+  // },
+
+  // ----- Botões -----
   botaozinho: {
-    backgroundColor: "#F40B5D",
+    alignItems: "center",
+    backgroundColor: "rgb(244, 11, 93)",
     borderRadius: 30,
-    padding: 10, 
-    width: 350,
+    padding: 10,
+    width: 330,
     margin: 5,
   },
 
   textodobotaozinho: {
     textAlign: "center",
     color: "white",
-    fontSize: 17,
+    fontSize: 19,
+    fontFamily: "bold",
   },
 
+  // ----- Inputs -----
   input1: {
-    backgroundColor: "#FFF2F9",
-    borderColor: "#F40B5D",
+    // fontStyle: 'italic',
+    backgroundColor: "rgb(255, 242, 249)",
+    borderColor: "rgb(244, 11, 93)",
     borderWidth: 1,
     borderRadius: 30,
-    padding: 10, 
+    padding: 10,
     width: 330,
     margin: 5,
-    color: 'gray',
-  },
-
-  texto: {
+    color: "rgb(244, 11, 93)",
     fontSize: 16,
+    fontFamily: "bold",
   },
 
   inputs: {
     padding: 10,
-    borderColor: "black",
+    borderColor: "rgb(0, 0, 0)",
   },
 
-  logo: {
-    marginTop: 130,
-    width: 300,
-    height: 300,
-    padding: 20,
+  // ----- Textos -----
+  texto: {
+    fontSize: 18,
+    color: "rgb(0, 0, 0)",
+    fontFamily: "bold",
+    // textAlign: "center",
+    // fontStyle: 'italic',
   },
 
   textodecima: {
-    fontSize: 20,
+    // textAlign: "center",
+    // fontStyle: 'italic',
+    color: "rgb(244, 11, 93)",
+    fontSize: 27,
+    fontFamily: "bold",
   },
 
   textodeadmin: {
+    // fontStyle: 'italic',
+    alignItems: 'center',
+    height: 50,
     fontSize: 18,
-    padding: 20,
-    color: '#0080FF',
-    textDecorationLine: 'underline',
-  }
+    padding: 10,
+    marginTop: 10,
+    textDecorationLine: "underline",
+    color: "rgb(48, 155, 255)",
+    borderRadius: 100,
+    fontFamily: "bold",
+  },
+
+  textoPromocoes: {
+    fontSize: 27,
+    // fontStyle: 'italic',
+    fontWeight: 'bold',
+    textAlign: 'center'
+  },
+
+  // ----- Ícones -----
+  icones1: {
+    color: "rgb(29, 29, 29)",
+    marginHorizontal: 30,
+    padding: 10,
+    borderRadius: 200,
+  },
+
+ bolaDePerfil: {
+  color: "rgb(29, 29, 29)",
+  position: 'absolute',
+  left: 3,
+  },
+
+  // ----- Elementos gráficos -----
+  logo: {
+    backgroundColor: "rgb(255, 255, 255)",
+    justifyContent: "center",
+    alignItems: "center",
+    // borderRadius: 30,
+    width: 150,
+    height: 150,
+  },
+
+  // atraslogin: {
+  //   backgroundColor: "rgb(255, 255, 255)",
+  //   justifyContent: "center",
+  //   alignItems: "center",
+  //   borderRadius: 1000,
+  //   marginTop: 130,
+  //   width: 200,
+  //   height: 200,
+  //   borderWidth: 1,
+  //   borderColor: "rgb(244, 11, 93)",
+  // },
+
+  // ----- Barra inferior -----
+  barraNoCantoInferior: {
+    position: 'absolute',
+    bottom: 0,
+    width: "100vw",
+    backgroundColor: "rgb(172, 172, 172)",
+    borderTopWidth: 1,
+    borderTopColor: "rgb(54, 53, 53)",
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+  },
+
 });
