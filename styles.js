@@ -83,6 +83,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     height: 50,
     fontSize: 18,
+<<<<<<< HEAD
     padding: 10,
     marginTop: 10,
     textDecorationLine: "underline",
@@ -148,3 +149,22 @@ export default StyleSheet.create({
   },
 
 });
+=======
+    padding: 20,
+    color: '#0080FF',
+    textDecorationLine: 'underline',
+  },
+  homenav: {
+    backgroundColor: 'pink',
+    width: 30
+  },
+  logo2: {
+    width: 70,
+    height: 70,
+  },
+  logoContainer:{
+    alignSelf:'flex-start',
+    padding: 10,
+  }
+});
+>>>>>>> 89734bd396d4561bc1fe989b8c5c1f04a42ead80
