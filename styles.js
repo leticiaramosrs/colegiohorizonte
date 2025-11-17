@@ -109,10 +109,20 @@ export default StyleSheet.create({
     borderRadius: 200,
   },
 
- bolaDePerfil: {
+ bolaDePerfilBotao: {
+  width: '20px',
+  height: '20px',
   color: "rgb(29, 29, 29)",
   position: 'absolute',
   left: 3,
+  top: 0,
+  padding: 10,
+  },
+
+  bag: {
+    position: 'absolute',
+    top: 10,
+    right: 10,
   },
 
   // ----- Elementos gráficos -----
@@ -149,6 +159,11 @@ export default StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
   },
+  //-------- Cantina ----------
+  item1:{
+    backgroundColor:'pink',
+  }
+ 
 
   // homenav: {
   //   backgroundColor: 'pink',
