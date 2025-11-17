@@ -13,7 +13,6 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  // const stack = createNativeStackNavigator();
   return (
 
     <NavigationContainer>
@@ -37,12 +36,23 @@ export default function App() {
           options={{title: 'Home', headerShown: false}}
           />
 
-        <Stack.Screen
+          <Stack.Screen
+          name="Carrinho"
+          component={CarrinhoScreen}
+          options={{title: 'carrinho', headerShown: false}}
+          />
+
+        {/* <Stack.Screen
           name="Compras"
           component={ComprasScreen}
           options={{ title: "Compras" }}
-          />
+          /> */}
 
+        <Stack.Screen 
+          name="Loja" 
+          component={LojaScreen} 
+          options={{title: 'Loja', headerShown: false}}
+          />
 
       </Stack.Navigator>
     </NavigationContainer>
@@ -77,6 +87,8 @@ function LoginComumScreen({ navigation }) {
     <Text style={styles.textodeadmin}>Entre como Admin</Text>
     </TouchableOpacity>
     </View>
+
+
   </View>
   );
 }
@@ -123,27 +135,31 @@ function HomeScreen({ navigation }) {
   return (
 
   <View style={styles.tudo}>
-     <Text style={styles.textoPromocoes}>Promoções {"\n"} cárdapio {"\n"} do dia</Text>
-        
+
+    <View style={styles.barraNoCantoSuperior}>
+
         <TouchableOpacity style={styles.bolaDePerfilBotao}
       onPress={() => navigation.navigate("LoginComum")}>
-          <Ionicons name="person-circle" size={50} color="black" style={styles.bolaDePerfilSimbolo} />
+          <Ionicons name="person-circle" size={60} color="black" style={styles.bolaDePerfilSimbolo} />
     </TouchableOpacity>
+    </View>
+
+    <Text style={styles.textoPromocoes}>Promoções cárdapio {"\n"} do dia</Text>
 
   <View style={styles.barraNoCantoInferior}>
 
   <TouchableOpacity style={styles.icones1}
-      onPress={() => navigation.navigate("LoginComum")}>
+      onPress={() => navigation.navigate("Home")}>
          <FontAwesome6 name="house" size={34} color="black" style={styles.icones1}/>
     </TouchableOpacity>
 
     <TouchableOpacity style={styles.icones1}
-      onPress={() => navigation.navigate("compras")}>
+      onPress={() => navigation.navigate("Loja")}>
       <Foundation name="shopping-cart" size={40} color="black" style={styles.icones1}/>    
     </TouchableOpacity>
 
     <TouchableOpacity style={styles.icones1}
-      onPress={() => navigation.navigate("LoginComum")}>
+      onPress={() => navigation.navigate("Home")}>
       <Entypo name="ticket" size={36} color="black" style={styles.icones1}/>
     </TouchableOpacity>
 
@@ -157,17 +173,62 @@ function HomeScreen({ navigation }) {
   );
 }
 
-    // <View style={styles.tudo}>
-    //   <View style={styles.logoContainer}>
-    //     <Image style={styles.logo2} source={require('./assets/logoColegiocopia1.png')} ></Image>
-    //   </View>
-    //   <View style={styles.homenav}> </View>
-    // </View>
-    
+function LojaScreen({ navigation }) {
+  return (
+    <View style={styles.tudo}>
+
+    <View style={styles.barraNoCantoSuperior}>
+
+    <TouchableOpacity style={styles.bolaDePerfilBotao}
+    onPress={() => navigation.navigate("LoginComum")}>
+    <Ionicons name="person-circle" size={60} color="black" style={styles.bolaDePerfilSimbolo} />
+    </TouchableOpacity>
+
+    <TouchableOpacity style={styles.bag}
+    onPress={() => navigation.navigate("Carrinho")}>
+    <Ionicons name="bag" size={50} color="black" />
+    </TouchableOpacity>
+
+    </View>
 
 
-//   );
-// }
-function ComprasScreen({ navigation }) {
+    <View style={styles.barraNoCantoInferior}>
 
+<TouchableOpacity style={styles.icones1}
+    onPress={() => navigation.navigate("Home")}>
+       <FontAwesome6 name="house" size={34} color="black" style={styles.icones1}/>
+  </TouchableOpacity>
+
+  <TouchableOpacity style={styles.icones1}
+    onPress={() => navigation.navigate("Loja")}>
+    <Foundation name="shopping-cart" size={40} color="black" style={styles.icones1}/>    
+  </TouchableOpacity>
+
+  <TouchableOpacity style={styles.icones1}
+    onPress={() => navigation.navigate("Home")}>
+    <Entypo name="ticket" size={36} color="black" style={styles.icones1}/>
+  </TouchableOpacity>
+
+  <TouchableOpacity style={styles.icones1}
+    onPress={() => navigation.navigate("LoginComum")}>
+    <Ionicons name="settings-outline" size={36} color="black" style={styles.icones1}/>
+  </TouchableOpacity>
+
+  </View>
+  </View>
+
+
+  );
 }
+
+function CarrinhoScreen({ navigation }) {
+  return (
+    <View>
+          <Text> Carrinho</Text>
+
+    </View>
+   
+  
+  );
+}
+

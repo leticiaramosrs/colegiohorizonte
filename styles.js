@@ -104,15 +104,30 @@ export default StyleSheet.create({
   // ----- Ícones -----
   icones1: {
     color: "rgb(29, 29, 29)",
-    marginHorizontal: 30,
+    marginHorizontal: 10,
     padding: 10,
     borderRadius: 200,
   },
 
- bolaDePerfil: {
+ bolaDePerfilBotao: {
+  justifyContent: 'center',
+  alignItems: 'center',
+  width: 50,
+  height: 50,
+  backgroundColor: "rgb(255, 255, 255)",
   color: "rgb(29, 29, 29)",
   position: 'absolute',
-  left: 3,
+  borderRadius: 2000,
+  borderWidth: 1,
+  borderColor: 'black',
+  top: 10,
+  left: 10,
+  },
+
+  bag: {
+    position: 'absolute',
+    top: 10,
+    right: 10,
   },
 
   // ----- Elementos gráficos -----
@@ -137,7 +152,7 @@ export default StyleSheet.create({
   //   borderColor: "rgb(244, 11, 93)",
   // },
 
-  // ----- Barra inferior -----
+  // ----- Barras -----
   barraNoCantoInferior: {
     position: 'absolute',
     bottom: 0,
@@ -150,17 +165,18 @@ export default StyleSheet.create({
     flexDirection: 'row',
   },
 
-  // homenav: {
-  //   backgroundColor: 'pink',
-  //   width: 30
-  // },
-  
-    // logo2: {
-    //   width: 70,
-    //   height: 70,
-    // },
-    // logoContainer:{
-    //   alignSelf:'flex-start',
-    //   padding: 10,
-    // }
-});
+  barraNoCantoSuperior: {
+    position: 'absolute',
+    top: 0,
+    height: 80,
+    width: "100vw",
+    backgroundColor: "rgb(172, 172, 172)",
+    borderBottomWidth: 1,
+    borderBottompColor: "rgb(54, 53, 53)",
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+  },
+
+}
+);
