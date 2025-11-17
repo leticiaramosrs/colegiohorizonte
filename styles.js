@@ -16,13 +16,13 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
 
-  // tudomenor: {
-  //   flex: 1,
-  //   backgroundColor: "rgb(253, 206, 222)",
-  //   alignItems: 'center',
-  //   justifyContent: 'center',
-  //   marginTop: -100,
-  // },
+  tudomenor: {
+    flex: 1,
+    // backgroundColor: "rgb(253, 206, 222)",
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: -100,
+  },
 
   // ----- Botões -----
   botaozinho: {
@@ -83,13 +83,15 @@ export default StyleSheet.create({
     alignItems: 'center',
     height: 50,
     fontSize: 18,
-<<<<<<< HEAD
     padding: 10,
     marginTop: 10,
     textDecorationLine: "underline",
     color: "rgb(48, 155, 255)",
     borderRadius: 100,
     fontFamily: "bold",
+    padding: 20,
+    color: '#0080FF',
+    textDecorationLine: 'underline',
   },
 
   textoPromocoes: {
@@ -148,23 +150,17 @@ export default StyleSheet.create({
     flexDirection: 'row',
   },
 
+  // homenav: {
+  //   backgroundColor: 'pink',
+  //   width: 30
+  // },
+  
+    // logo2: {
+    //   width: 70,
+    //   height: 70,
+    // },
+    // logoContainer:{
+    //   alignSelf:'flex-start',
+    //   padding: 10,
+    // }
 });
-=======
-    padding: 20,
-    color: '#0080FF',
-    textDecorationLine: 'underline',
-  },
-  homenav: {
-    backgroundColor: 'pink',
-    width: 30
-  },
-  logo2: {
-    width: 70,
-    height: 70,
-  },
-  logoContainer:{
-    alignSelf:'flex-start',
-    padding: 10,
-  }
-});
->>>>>>> 89734bd396d4561bc1fe989b8c5c1f04a42ead80
