@@ -6,6 +6,7 @@ import Foundation from '@expo/vector-icons/Foundation';
 import Entypo from '@expo/vector-icons/Entypo';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { NavigationContainer } from '@react-navigation/native';
+
 // import { createDrawerNavigator } from '@react-navigation/drawer';
 // import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -41,12 +42,6 @@ export default function App() {
           component={CarrinhoScreen}
           options={{title: 'carrinho', headerShown: false}}
           />
-
-        {/* <Stack.Screen
-          name="Compras"
-          component={ComprasScreen}
-          options={{ title: "Compras" }}
-          /> */}
 
         <Stack.Screen 
           name="Loja" 
@@ -86,6 +81,8 @@ function LoginComumScreen({ navigation }) {
       onPress={() => navigation.navigate("LoginDeAdm")}>
     <Text style={styles.textodeadmin}>Entre como Admin</Text>
     </TouchableOpacity>
+
+    
     </View>
 
 
@@ -173,6 +170,128 @@ function HomeScreen({ navigation }) {
   );
 }
 
+function LojaScreen({ navigation }) {
+  return (
+    <View style={styles.tudo}>
+
+    <View style={styles.barraNoCantoSuperior}>
+
+    <TouchableOpacity style={styles.bolaDePerfilBotao}
+    onPress={() => navigation.navigate("LoginComum")}>
+    <Ionicons name="person-circle" size={60} color="black" style={styles.bolaDePerfilSimbolo} />
+    </TouchableOpacity>
+
+    <TouchableOpacity style={styles.bag}
+    onPress={() => navigation.navigate("Carrinho")}>
+    <Ionicons name="bag" size={50} color="black" />
+    </TouchableOpacity>
+
+    </View>
+
+
+    <View style={styles.barraNoCantoInferior}>
+
+<TouchableOpacity style={styles.icones1}
+    onPress={() => navigation.navigate("Home")}>
+       <FontAwesome6 name="house" size={34} color="black" style={styles.icones1}/>
+  </TouchableOpacity>
+
+  <TouchableOpacity style={styles.icones1}
+    onPress={() => navigation.navigate("Loja")}>
+    <Foundation name="shopping-cart" size={40} color="black" style={styles.icones1}/>    
+  </TouchableOpacity>
+
+  <TouchableOpacity style={styles.icones1}
+    onPress={() => navigation.navigate("Home")}>
+    <Entypo name="ticket" size={36} color="black" style={styles.icones1}/>
+  </TouchableOpacity>
+
+  <TouchableOpacity style={styles.icones1}
+    onPress={() => navigation.navigate("LoginComum")}>
+    <Ionicons name="settings-outline" size={36} color="black" style={styles.icones1}/>
+  </TouchableOpacity>
+
+  </View>
+  </View>
+
+
+  );
+}
+
+function CarrinhoScreen({ navigation }) {
+  return (
+    <View>
+          <Text> Carrinho</Text>
+
+    </View>
+   
+  
+  );
+}
+
+
+
+function LojaScreen({ navigation }) {
+  return (
+    <View style={styles.tudo}>
+
+
+    <TouchableOpacity style={styles.bolaDePerfilBotao}
+    onPress={() => navigation.navigate("LoginComum")}>
+    <Ionicons name="person-circle" size={50} color="black" style={styles.bolaDePerfilSimbolo} />
+    </TouchableOpacity>
+
+    <TouchableOpacity style={styles.bag}
+    onPress={() => navigation.navigate("Carrinho")}>
+    <Ionicons name="bag" size={50} color="black" />
+    </TouchableOpacity>
+
+
+  <View style={styles.barraNoCantoInferior}>
+
+<TouchableOpacity style={styles.icones1}
+    onPress={() => navigation.navigate("LoginComum")}>
+       <FontAwesome6 name="house" size={34} color="black" style={styles.icones1}/>
+  </TouchableOpacity>
+
+  <TouchableOpacity style={styles.icones1}
+    onPress={() => navigation.navigate("Loja")}>
+    <Foundation name="shopping-cart" size={40} color="black" style={styles.icones1}/>    
+  </TouchableOpacity>
+
+  <TouchableOpacity style={styles.icones1}
+    onPress={() => navigation.navigate("LoginComum")}>
+    <Entypo name="ticket" size={36} color="black" style={styles.icones1}/>
+  </TouchableOpacity>
+
+  <TouchableOpacity style={styles.icones1}
+    onPress={() => navigation.navigate("LoginComum")}>
+    <Ionicons name="settings-outline" size={36} color="black" style={styles.icones1}/>
+  </TouchableOpacity>
+
+  </View>
+
+  <View style={styles.item1}>
+  <Image style={styles.logo} source={ require('./assets/sucodelaranja.jpg')}></Image>
+    {/* <Image source={ require('./assets/sucodelaranja.jpg')}> </Image> */}
+  </View>
+    <Text>Macaco</Text>
+  </View>
+
+  
+  
+  );
+}
+function CarrinhoScreen({ navigation }) {
+  return (
+    <View>
+          <Text> Carrinho</Text>
+
+    </View>
+   
+  
+  );
+}
 function LojaScreen({ navigation }) {
   return (
     <View style={styles.tudo}>
