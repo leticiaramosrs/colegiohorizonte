@@ -1,24 +1,48 @@
-import { Text, TouchableOpacity, View, TextInput, Image } from 'react-native';
-import styles from './styles'; 
-export default function Home(){
-    return(
-        <View style={styles.tudo}>
-                <Image style={styles.logo} source={ require('./assets/logoColegiocopia1.png')}></Image>
-                <Text style={styles.textodecima}>Entre na sua conta de estudante </Text>
-                <View style={styles.inputs}>
-                  <Text style={styles.texto}>Nome completo</Text>
-                  <TextInput style={styles.input1} placeholder="Digite seu nome completo" />
-        
-                  <Text style={styles.texto}>Matrícula</Text>
-                  <TextInput style={styles.input1} placeholder="Digite sua senha" />
-                </View>
-        
-                <TouchableOpacity style={styles.botaozinho}>
-                  <Text style={styles.textodobotaozinho}>Entrar</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.contaadmin} >
-                <Text style={styles.textodeadmin}>Entre na sua conta de Adimin</Text>
-                </TouchableOpacity>
-              </View>
-    )
+import { Text, TouchableOpacity, View } from 'react-native';
+import styles from './styles'; // importa os estilos de outro arquivo
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
+import Foundation from '@expo/vector-icons/Foundation';
+import Entypo from '@expo/vector-icons/Entypo';
+import Ionicons from '@expo/vector-icons/Ionicons';
+
+export default function HomeScreen({ navigation }) {
+  return (
+
+  <View style={styles.tudo}>
+
+    <View style={styles.barraNoCantoSuperior}>
+
+        <TouchableOpacity style={styles.bolaDePerfilBotao}
+      onPress={() => navigation.navigate("LoginComum")}>
+          <Ionicons name="person-circle" size={60} color="black" style={styles.bolaDePerfilSimbolo} />
+    </TouchableOpacity>
+    </View>
+
+    <Text style={styles.textoPromocoes}>Promoções cárdapio {"\n"} do dia</Text>
+
+  <View style={styles.barraNoCantoInferior}>
+
+  <TouchableOpacity style={styles.icones1}
+      onPress={() => navigation.navigate("Home")}>
+         <FontAwesome6 name="house" size={34} color="black" style={styles.icones1}/>
+    </TouchableOpacity>
+
+    <TouchableOpacity style={styles.icones1}
+      onPress={() => navigation.navigate("Carrinho")}>
+      <Foundation name="shopping-cart" size={40} color="black" style={styles.icones1}/>    
+    </TouchableOpacity>
+
+    <TouchableOpacity style={styles.icones1}
+      onPress={() => navigation.navigate("Home")}>
+      <Entypo name="ticket" size={36} color="black" style={styles.icones1}/>
+    </TouchableOpacity>
+
+    <TouchableOpacity style={styles.icones1}
+      onPress={() => navigation.navigate("LoginComum")}>
+      <Ionicons name="settings-outline" size={36} color="black" style={styles.icones1}/>
+    </TouchableOpacity>
+    
+  </View>
+  </View>
+  );
 }
