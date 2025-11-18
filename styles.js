@@ -74,7 +74,7 @@ export default StyleSheet.create({
     // textAlign: "center",
     // fontStyle: 'italic',
     color: "rgb(244, 11, 93)",
-    fontSize: 27,
+    fontSize: 23,
     fontFamily: "bold",
   },
 
@@ -98,12 +98,23 @@ export default StyleSheet.create({
     fontSize: 27,
     // fontStyle: 'italic',
     fontWeight: 'bold',
-    textAlign: 'center'
+    textAlign: 'center',
+    color: "rgb(255, 255, 255)",
+  },
+
+  textocarrinho: {
+     fontSize: 25,
+     color: 'white',
+     padding: 20,
+     width:  '100%',
+     textAlign: 'center',
+     fontStyle: 'italic',
+     fontWeight: 'bold',
   },
 
   // ----- Ícones -----
   icones1: {
-    color: "rgb(29, 29, 29)",
+    color: "rgb(255, 255, 255)",
     marginHorizontal: 10,
     padding: 10,
     borderRadius: 200,
@@ -115,7 +126,7 @@ export default StyleSheet.create({
   width: 50,
   height: 50,
   backgroundColor: "rgb(255, 255, 255)",
-  color: "rgb(29, 29, 29)",
+  color: "rgb(0, 0, 0)",
   position: 'absolute',
   borderRadius: 2000,
   borderWidth: 1,
@@ -128,6 +139,9 @@ export default StyleSheet.create({
     position: 'absolute',
     top: 10,
     right: 10,
+    color: "rgb(255, 255, 255)",
+    
+    
   },
 
   // ----- Elementos gráficos -----
@@ -136,8 +150,8 @@ export default StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     // borderRadius: 30,
-    width: 150,
-    height: 150,
+    width: 250,
+    height: 250,
   },
 
   // atraslogin: {
@@ -157,9 +171,8 @@ export default StyleSheet.create({
     position: 'absolute',
     bottom: 0,
     width: "100vw",
-    backgroundColor: "rgb(172, 172, 172)",
-    borderTopWidth: 1,
-    borderTopColor: "rgb(54, 53, 53)",
+    backgroundColor: "rgb(248, 106, 149)",
+  
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
@@ -170,9 +183,8 @@ export default StyleSheet.create({
     top: 0,
     height: 80,
     width: "100vw",
-    backgroundColor: "rgb(172, 172, 172)",
-    borderBottomWidth: 1,
-    borderBottompColor: "rgb(54, 53, 53)",
+    backgroundColor: "rgb(252, 142, 175)",
+    
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',

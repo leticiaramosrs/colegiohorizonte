@@ -137,7 +137,7 @@ function HomeScreen({ navigation }) {
 
         <TouchableOpacity style={styles.bolaDePerfilBotao}
       onPress={() => navigation.navigate("LoginComum")}>
-          <Ionicons name="person-circle" size={60} color="black" style={styles.bolaDePerfilSimbolo} />
+          <Ionicons name="person-circle" size={60} color="pink" style={styles.bolaDePerfilSimbolo} />
     </TouchableOpacity>
     </View>
 
@@ -147,7 +147,7 @@ function HomeScreen({ navigation }) {
 
   <TouchableOpacity style={styles.icones1}
       onPress={() => navigation.navigate("Home")}>
-         <FontAwesome6 name="house" size={34} color="black" style={styles.icones1}/>
+         <FontAwesome6 name="house" size={34} style={styles.icones1}/>
     </TouchableOpacity>
 
     <TouchableOpacity style={styles.icones1}
@@ -178,12 +178,12 @@ function LojaScreen({ navigation }) {
 
     <TouchableOpacity style={styles.bolaDePerfilBotao}
     onPress={() => navigation.navigate("LoginComum")}>
-    <Ionicons name="person-circle" size={60} color="black" style={styles.bolaDePerfilSimbolo} />
+    <Ionicons name="person-circle" size={60} color="pink" style={styles.bolaDePerfilSimbolo} />
     </TouchableOpacity>
 
     <TouchableOpacity style={styles.bag}
     onPress={() => navigation.navigate("Carrinho")}>
-    <Ionicons name="bag" size={50} color="black" />
+    <Ionicons name="bag" size={50} color="white" />
     </TouchableOpacity>
 
     </View>
@@ -215,100 +215,18 @@ function LojaScreen({ navigation }) {
   </View>
 
 
-  );
-}
+  );}
 
 function CarrinhoScreen({ navigation }) {
   return (
-    <View>
-          <Text> Carrinho</Text>
 
-    </View>
-   
-  
-  );
-}
-
-
-
-function LojaScreen({ navigation }) {
-  return (
     <View style={styles.tudo}>
 
-
-    <TouchableOpacity style={styles.bolaDePerfilBotao}
-    onPress={() => navigation.navigate("LoginComum")}>
-    <Ionicons name="person-circle" size={50} color="black" style={styles.bolaDePerfilSimbolo} />
-    </TouchableOpacity>
-
-    <TouchableOpacity style={styles.bag}
-    onPress={() => navigation.navigate("Carrinho")}>
-    <Ionicons name="bag" size={50} color="black" />
-    </TouchableOpacity>
-
-
-  <View style={styles.barraNoCantoInferior}>
-
-<TouchableOpacity style={styles.icones1}
-    onPress={() => navigation.navigate("LoginComum")}>
-       <FontAwesome6 name="house" size={34} color="black" style={styles.icones1}/>
-  </TouchableOpacity>
-
-  <TouchableOpacity style={styles.icones1}
-    onPress={() => navigation.navigate("Loja")}>
-    <Foundation name="shopping-cart" size={40} color="black" style={styles.icones1}/>    
-  </TouchableOpacity>
-
-  <TouchableOpacity style={styles.icones1}
-    onPress={() => navigation.navigate("LoginComum")}>
-    <Entypo name="ticket" size={36} color="black" style={styles.icones1}/>
-  </TouchableOpacity>
-
-  <TouchableOpacity style={styles.icones1}
-    onPress={() => navigation.navigate("LoginComum")}>
-    <Ionicons name="settings-outline" size={36} color="black" style={styles.icones1}/>
-  </TouchableOpacity>
-
+  <View style={styles.barraNoCantoSuperior}>
+    <Text style={styles.textocarrinho}>  Carrinho de Compras</Text> 
   </View>
 
-  <View style={styles.item1}>
-  <Image style={styles.logo} source={ require('./assets/sucodelaranja.jpg')}></Image>
-    {/* <Image source={ require('./assets/sucodelaranja.jpg')}> </Image> */}
-  </View>
-    <Text>Macaco</Text>
-  </View>
 
-  
-  
-  );
-}
-function CarrinhoScreen({ navigation }) {
-  return (
-    <View>
-          <Text> Carrinho</Text>
-
-    </View>
-   
-  
-  );
-}
-function LojaScreen({ navigation }) {
-  return (
-    <View style={styles.tudo}>
-
-    <View style={styles.barraNoCantoSuperior}>
-
-    <TouchableOpacity style={styles.bolaDePerfilBotao}
-    onPress={() => navigation.navigate("LoginComum")}>
-    <Ionicons name="person-circle" size={60} color="black" style={styles.bolaDePerfilSimbolo} />
-    </TouchableOpacity>
-
-    <TouchableOpacity style={styles.bag}
-    onPress={() => navigation.navigate("Carrinho")}>
-    <Ionicons name="bag" size={50} color="black" />
-    </TouchableOpacity>
-
-    </View>
 
 
     <View style={styles.barraNoCantoInferior}>
@@ -335,19 +253,5 @@ function LojaScreen({ navigation }) {
 
   </View>
   </View>
-
-
   );
 }
-
-function CarrinhoScreen({ navigation }) {
-  return (
-    <View>
-          <Text> Carrinho</Text>
-
-    </View>
-   
-  
-  );
-}
-
