@@ -111,6 +111,15 @@ export default StyleSheet.create({
      fontStyle: 'italic',
      fontWeight: 'bold',
   },
+  Textocarrinho1: {
+    fontSize: 25,
+    color: 'white',
+    padding: 20,
+    textAlign: 'center',
+    fontStyle: 'italic',
+    fontWeight: 'bold',
+
+  },
 
   // ----- Ícones -----
   icones1: {
@@ -120,16 +129,24 @@ export default StyleSheet.create({
     borderRadius: 200,
   },
 
+  seta: {
+
+  top: -20,
+  left: -110,
+  position: 'absolute',
+ 
+  },
+
  bolaDePerfilBotao: {
   justifyContent: 'center',
   alignItems: 'center',
   width: 50,
   height: 50,
   backgroundColor: "rgb(255, 255, 255)",
-  color: "rgb(0, 0, 0)",
+  color: 'pink',
   position: 'absolute',
   borderRadius: 2000,
-  borderWidth: 1,
+
   borderColor: 'black',
   top: 10,
   left: 10,
@@ -189,6 +206,56 @@ export default StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
   },
+  containerProdutos: {
+    paddingTop: 20,
+    paddingBottom: 100,
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    gap: 15,
+  },
+  
+  cardProduto: {
+    backgroundColor: "#ffe6f0",
+    width: 160,
+    padding: 15,
+    borderRadius: 20,
+    alignItems: "center",
+  },
+  
+  imagemProduto: {
+    width: 120,
+    height: 120,
+    borderRadius: 10,
+    marginBottom: 10,
+    backgroundColor: "#fff",
+  },
+  
+  nomeProduto: {
+    fontSize: 18,
+    fontWeight: "bold",
+    marginBottom: 10,
+  },
+  
+  botaoComprar: {
+    backgroundColor: "rgb(244, 11, 93)",
+    paddingVertical: 6,
+    paddingHorizontal: 14,
+    borderRadius: 15,
+  },
+  
+  textoBotaoComprar: {
+    color: "white",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  produtocaixa: {
+    backgroundColor:'pink',
+    border: 1,
+    
+  },
+
+  
 
 }
 );
