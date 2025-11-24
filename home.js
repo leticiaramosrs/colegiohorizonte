@@ -13,7 +13,7 @@ export default function HomeScreen({ navigation }) {
     <View style={styles.barraNoCantoSuperior}>
 
         <TouchableOpacity style={styles.bolaDePerfilBotao}
-      onPress={() => navigation.navigate("LoginComum")}>
+      onPress={() => navigation.navigate("Usuarios")}>
           <Ionicons name="person-circle" size={60} color="black" style={styles.bolaDePerfilSimbolo} />
     </TouchableOpacity>
     </View>

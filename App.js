@@ -10,6 +10,7 @@ import LoginComumScreen from './loginComum';
 import LojaScreen from './loja';
 import LoginadmScreen from './loginAdm';
 import CarrinhoScreen from './carrinho';
+import Usuarios from './usuarios';
 
 //=============================================================
 
@@ -44,6 +45,16 @@ export default function App() {
         <Stack.Screen 
           name="Loja" 
           component={LojaScreen} 
+          />
+
+        <Stack.Screen 
+          name="Usuarios" 
+          component={Usuarios} 
+          />
+
+        <Stack.Screen 
+          name="UsuariosCadastrados" 
+          component={UsuariosCadastrados} 
           />
 
       </Stack.Navigator>

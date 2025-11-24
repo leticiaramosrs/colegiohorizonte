@@ -28,7 +28,7 @@ export default function LoginComumScreen({ navigation }) {
     <Text style={styles.textodeadmin}>Entre como Admin</Text>
     </TouchableOpacity>
 
-    
+
     </View>
 
 

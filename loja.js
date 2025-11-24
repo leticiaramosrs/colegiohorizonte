@@ -12,7 +12,7 @@ export default function LojaScreen({ navigation }) {
     <View style={styles.barraNoCantoSuperior}>
 
     <TouchableOpacity style={styles.bolaDePerfilBotao}
-    onPress={() => navigation.navigate("LoginComum")}>
+    onPress={() => navigation.navigate("Usuarios")}>
     <Ionicons name="person-circle" size={60} color="black" style={styles.bolaDePerfilSimbolo} />
     </TouchableOpacity>
 
@@ -23,7 +23,6 @@ export default function LojaScreen({ navigation }) {
 
     </View>
 
-
     <View style={styles.barraNoCantoInferior}>
 
 <TouchableOpacity style={styles.icones1}
@@ -33,7 +32,7 @@ export default function LojaScreen({ navigation }) {
 
   <TouchableOpacity style={styles.icones1}
     onPress={() => navigation.navigate("Loja")}>
-    <Foundation name="shopping-cart" size={40} color="black" style={styles.icones1}/>    
+    <Foundation name="shopping-cart" size={40} color="black" style={styles.icones1}/>
   </TouchableOpacity>
 
   <TouchableOpacity style={styles.icones1}
