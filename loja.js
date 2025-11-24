@@ -8,17 +8,20 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 export default function LojaScreen({ navigation }) {
   return (
     <View style={styles.tudo}>
+      <TouchableOpacity>
+
+      </TouchableOpacity>
 
     <View style={styles.barraNoCantoSuperior}>
 
     <TouchableOpacity style={styles.bolaDePerfilBotao}
-    onPress={() => navigation.navigate("LoginComum")}>
-    <Ionicons name="person-circle" size={60} color="black" style={styles.bolaDePerfilSimbolo} />
+    onPress={() => navigation.navigate("Perfil")}>
+    <Ionicons name="person-circle" size={60} color="pink" style={styles.bolaDePerfilSimbolo} />
     </TouchableOpacity>
 
     <TouchableOpacity style={styles.bag}
     onPress={() => navigation.navigate("Carrinho")}>
-    <Ionicons name="bag" size={50} color="black" />
+    <Ionicons name="bag" size={50} color="white" />
     </TouchableOpacity>
 
     </View>
