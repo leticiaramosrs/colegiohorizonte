@@ -13,8 +13,12 @@ export default function HomeScreen({ navigation }) {
     <View style={styles.barraNoCantoSuperior}>
 
         <TouchableOpacity style={styles.bolaDePerfilBotao}
+      onPress={() => navigation.navigate("Perfil")}>
+          <Ionicons name="person-circle" size={60} color="pink" style={styles.bolaDePerfilSimbolo} />
+    </TouchableOpacity>
+        <TouchableOpacity style={styles.bolaDePerfilBotao}
       onPress={() => navigation.navigate("Usuarios")}>
-          <Ionicons name="person-circle" size={60} color="black" style={styles.bolaDePerfilSimbolo} />
+          <Ionicons name="person-circle" size={60} color="pink" style={styles.bolaDePerfilSimbolo} />
     </TouchableOpacity>
     </View>
 
@@ -28,12 +32,12 @@ export default function HomeScreen({ navigation }) {
     </TouchableOpacity>
 
     <TouchableOpacity style={styles.icones1}
-      onPress={() => navigation.navigate("Carrinho")}>
+      onPress={() => navigation.navigate("Loja")}>
       <Foundation name="shopping-cart" size={40} color="black" style={styles.icones1}/>    
     </TouchableOpacity>
 
     <TouchableOpacity style={styles.icones1}
-      onPress={() => navigation.navigate("Home")}>
+      onPress={() => navigation.navigate("Ticket")}>
       <Entypo name="ticket" size={36} color="black" style={styles.icones1}/>
     </TouchableOpacity>
 
