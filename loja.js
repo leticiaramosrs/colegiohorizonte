@@ -37,7 +37,7 @@ export default function LojaScreen({ navigation }) {
   </TouchableOpacity>
 
   <TouchableOpacity style={styles.icones1}
-    onPress={() => navigation.navigate("Home")}>
+    onPress={() => navigation.navigate("Ticket")}>
     <Entypo name="ticket" size={36} color="black" style={styles.icones1}/>
   </TouchableOpacity>
 
