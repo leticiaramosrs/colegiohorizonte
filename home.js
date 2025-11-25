@@ -17,13 +17,19 @@ export default function HomeScreen({ navigation }) {
           <Ionicons name="person-circle" size={60} color="pink" style={styles.bolaDePerfilSimbolo} />
     </TouchableOpacity>
 
-        <TouchableOpacity style={styles.bolaDePerfilBotao}
+        {/* <TouchableOpacity style={styles.bolaDePerfilBotao}
       onPress={() => navigation.navigate("Usuarios")}>
           <Ionicons name="person-circle" size={60} color="pink" style={styles.bolaDePerfilSimbolo} />
-    </TouchableOpacity>
+    </TouchableOpacity> */}
     </View>
 
-    <Text style={styles.textoPromocoes}>Promoções cárdapio {"\n"} do dia</Text>
+  
+    <Text style={styles.textoPromocoes}> Cárdapio do dia</Text>
+    <View style={styles.caixahome}> <Text> </Text><View style={styles.caixahome2}></View></View>
+    <View style={styles.caixahome}> <Text> </Text><View style={styles.caixahome2}></View></View>
+    <View style={styles.caixahome}> <Text> </Text><View style={styles.caixahome2}></View></View>
+    <View style={styles.caixahome}> <Text> </Text><View style={styles.caixahome2}></View></View>
+    <View style={styles.caixahome}> <Text> </Text><View style={styles.caixahome2}></View></View>
 
   <View style={styles.barraNoCantoInferior}>
 

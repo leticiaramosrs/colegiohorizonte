@@ -99,7 +99,8 @@ export default StyleSheet.create({
     // fontStyle: 'italic',
     fontWeight: 'bold',
     textAlign: 'center',
-    color: "rgb(255, 255, 255)",
+    color:"rgb(244, 11, 93)",
+    top: 100,
   },
 
   textocarrinho: {
@@ -253,6 +254,31 @@ export default StyleSheet.create({
     backgroundColor:'pink',
     border: 1,
     
+  },
+  caixahome: {
+    width: 500,
+    borderRadius: 30,
+    top: 130,
+   margin: 20,
+    height: 150,
+    backgroundColor: "rgb(206, 206, 206)",
+    color: 'black',
+    borderWidth: 1,
+    borderColor: "rgb(148, 147, 147)",
+  },
+  caixahome2: {
+    height: 100,
+    width: 150,
+    backgroundColor: "rgb(168, 168, 168)",
+    borderRadius: 50,
+    right: -30,
+    top: 5,
+    justifyContent: 'center',
+   borderWidth: 1,
+   borderColor: "rgb(136, 136, 136)",
+
+    
+
   },
 
   
