@@ -13,6 +13,7 @@ import CarrinhoScreen from './carrinho';
 import PerfilScreen from './Perfil';
 import TicketScreen from './ticket';
 import Usuarios from './usuarios';
+import UsuariosCadastrados from './usuariosCadastrados'
 
 //=============================================================
 

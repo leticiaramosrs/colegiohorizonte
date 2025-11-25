@@ -16,6 +16,7 @@ export default function HomeScreen({ navigation }) {
       onPress={() => navigation.navigate("Perfil")}>
           <Ionicons name="person-circle" size={60} color="pink" style={styles.bolaDePerfilSimbolo} />
     </TouchableOpacity>
+
         <TouchableOpacity style={styles.bolaDePerfilBotao}
       onPress={() => navigation.navigate("Usuarios")}>
           <Ionicons name="person-circle" size={60} color="pink" style={styles.bolaDePerfilSimbolo} />
@@ -42,7 +43,7 @@ export default function HomeScreen({ navigation }) {
     </TouchableOpacity>
 
     <TouchableOpacity style={styles.icones1}
-      onPress={() => navigation.navigate("LoginComum")}>
+      onPress={() => navigation.navigate("Perfil")}>
       <Ionicons name="settings-outline" size={36} color="black" style={styles.icones1}/>
     </TouchableOpacity>
     
