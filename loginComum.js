@@ -2,6 +2,10 @@ import { Text, TouchableOpacity, View, TextInput, Image } from 'react-native';
 import styles from './styles'; // importa os estilos de outro arquivo
 
 export default function LoginComumScreen({ navigation }) {
+  const newLocal = <TouchableOpacity style={styles.botaozinho}
+    onPress={() => navigation.navigate("Home")}>
+    <Text style={styles.textodobotaozinho}>Entrar</Text>
+  </TouchableOpacity>;
   return (
     <View style={styles.tudo}>
 
@@ -18,10 +22,7 @@ export default function LoginComumScreen({ navigation }) {
       <TextInput secureTextEntry style={styles.input1} placeholder="Digite sua senha" />
     </View>
 
-    <TouchableOpacity style={styles.botaozinho}
-    onPress={() => navigation.navigate("Home")}>
-      <Text style={styles.textodobotaozinho}>Entrar</Text>
-    </TouchableOpacity>
+    {newLocal}
 
     <TouchableOpacity style={styles.contaadmin}
       onPress={() => navigation.navigate("LoginDeAdm")}>
