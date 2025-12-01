@@ -1,8 +1,13 @@
+//=============================================================
+// Importações de navegação / Etc
+//=============================================================
+
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
+import { UserProvider } from './UserContext';
 
 //=============================================================
-// Telas
+// Telas Importadas
 //=============================================================
 
 import HomeScreen from './home';
@@ -16,15 +21,17 @@ import Usuarios from './usuarios';
 import UsuariosCadastrados from './usuariosCadastrados'
 
 //=============================================================
+// Criação e nomeamento de Telas
+//=============================================================
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
 
+    <UserProvider>
     <NavigationContainer>
-<Stack.Navigator screenOptions={{ headerShown: false }}>
-
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen 
           name="LoginComum" 
           component={LoginComumScreen} 
@@ -73,6 +80,6 @@ export default function App() {
 
       </Stack.Navigator>
     </NavigationContainer>
-
+    </UserProvider>
   );
 }
