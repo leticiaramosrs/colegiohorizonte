@@ -12,6 +12,10 @@ export default function LoginComumScreen({ navigation }) {
     login({ name: nome, role: "estudante" });
     console.log(nome,senha)
   }
+  const newLocal = <TouchableOpacity style={styles.botaozinho}
+    onPress={() => navigation.navigate("Home")}>
+    <Text style={styles.textodobotaozinho}>Entrar</Text>
+  </TouchableOpacity>;
   return (
     
     <View style={styles.tudo}>
@@ -66,6 +70,7 @@ export default function LoginComumScreen({ navigation }) {
             navigation.navigate("Home")}}>
           <Text style={styles.textodobotaozinho}>Entrar</Text>
         </TouchableOpacity>
+    {newLocal}
 
         <TouchableOpacity style={styles.contaadmin}
           onPress={() => navigation.navigate("LoginDeAdm")}>

@@ -75,8 +75,8 @@ export default function App() {
         <Stack.Screen 
           name="UsuariosCadastrados" 
           component={UsuariosCadastrados} 
-          /> */}
-
+          /> 
+*/}
       </Stack.Navigator>
     </NavigationContainer>
     </UserProvider>
