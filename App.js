@@ -66,7 +66,7 @@ export default function App() {
           name="Ticket" 
           component={TicketScreen} 
           />
-
+{/* 
         <Stack.Screen 
           name="Usuarios" 
           component={Usuarios} 
@@ -75,7 +75,7 @@ export default function App() {
         <Stack.Screen 
           name="UsuariosCadastrados" 
           component={UsuariosCadastrados} 
-          />
+          /> */}
 
       </Stack.Navigator>
     </NavigationContainer>

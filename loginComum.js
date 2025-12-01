@@ -18,7 +18,6 @@ export default function LoginComumScreen({ navigation }) {
 
       <View style={styles.tudomenor}>
         <View style={styles.atraslogin}>
-          <Text>{user.name}</Text>
           <Image style={styles.logo} source={require('./assets/logoColegiocopia1.png')}></Image>
         </View>
 
