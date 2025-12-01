@@ -8,7 +8,10 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
 
-  // ----- Containers principais -----
+//=============================================================
+// Containers principais
+//=============================================================
+
   tudo: {
     backgroundColor: "rgb(255, 255, 255)",
     // backgroundColor: "rgb(240, 240, 240)",
@@ -24,7 +27,10 @@ export default StyleSheet.create({
     marginTop: -100,
   },
 
-  // ----- Botões -----
+//============================================================= 
+// Botões
+//============================================================= 
+
   botaozinho: {
     alignItems: "center",
     backgroundColor: "rgb(244, 11, 93)",
@@ -41,7 +47,10 @@ export default StyleSheet.create({
     fontFamily: "bold",
   },
 
-  // ----- Inputs -----
+  //============================================================= 
+  // Inputs
+  //============================================================= 
+
   input1: {
     // fontStyle: 'italic',
     backgroundColor: "rgb(255, 242, 249)",
@@ -61,7 +70,10 @@ export default StyleSheet.create({
     borderColor: "rgb(0, 0, 0)",
   },
 
-  // ----- Textos -----
+  //============================================================= 
+  // Textos
+  //============================================================= 
+
   texto: {
     fontSize: 18,
     color: "rgb(0, 0, 0)",
@@ -76,6 +88,18 @@ export default StyleSheet.create({
     color: "rgb(244, 11, 93)",
     fontSize: 23,
     fontFamily: "bold",
+  },
+
+  boasVindas: {
+    fontSize: 27,
+    position: "absolute",
+    // fontStyle: 'italic',
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color:"rgb(244, 11, 93)",
+    backgroundColor:"rgb(255, 170, 198)",
+    width: 250,
+    height: 50,
   },
 
   textodeadmin: {
@@ -128,7 +152,10 @@ export default StyleSheet.create({
    
   },
 
-  // ----- Ícones -----
+  //============================================================= 
+  // Ícones
+  //============================================================= 
+
   icones1: {
     color: "rgb(255, 255, 255)",
     marginHorizontal: 10,
@@ -168,7 +195,10 @@ export default StyleSheet.create({
     
   },
 
-  // ----- Elementos gráficos -----
+  //============================================================= 
+  // Elementos gráficos
+  //============================================================= 
+
   logo: {
     backgroundColor: "rgb(255, 255, 255)",
     justifyContent: "center",
@@ -190,8 +220,19 @@ export default StyleSheet.create({
   //   borderColor: "rgb(244, 11, 93)",
   // },
 
-  // ----- Barras -----
-  
+  //============================================================= 
+  // Barras
+  //============================================================= 
+
+  barraNoCantoInferior: {
+    position: 'absolute',
+    bottom: 0,
+    width: "100vw",
+    backgroundColor: "rgb(248, 106, 149)",
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+  },
 
   barraNoCantoSuperior: {
     position: 'absolute',
@@ -199,11 +240,11 @@ export default StyleSheet.create({
     height: 80,
     width: "100vw",
     backgroundColor: "rgb(252, 142, 175)",
-    
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
   },
+
   containerProdutos: {
     paddingTop: 20,
     paddingBottom: 100,
@@ -252,17 +293,19 @@ export default StyleSheet.create({
     border: 1,
     
   },
+
   caixahome: {
     width: 500,
     borderRadius: 30,
     top: 130,
-   margin: 20,
+    margin: 20,
     height: 150,
     backgroundColor: "rgb(206, 206, 206)",
     color: 'black',
     borderWidth: 1,
     borderColor: "rgb(148, 147, 147)",
   },
+
   caixahome2: {
     height: 100,
     width: 150,
@@ -271,11 +314,18 @@ export default StyleSheet.create({
     right: -30,
     top: 5,
     justifyContent: 'center',
-   borderWidth: 1,
-   borderColor: "rgb(136, 136, 136)",
+    borderWidth: 1,
+    borderColor: "rgb(136, 136, 136)",
 
-    
+  },
 
+  boasVindasFundo: {
+    textAlign: 'center',
+    alignItems: 'center',
+    backgroundColor:"rgb(255, 170, 198)",
+    width: 250,
+    height: 50,
+    position: "absolute",
   },
 
   
