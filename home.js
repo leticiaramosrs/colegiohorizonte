@@ -4,8 +4,12 @@ import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import Foundation from '@expo/vector-icons/Foundation';
 import Entypo from '@expo/vector-icons/Entypo';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { useUserContext } from "./UserContext";
 
 export default function HomeScreen({ navigation }) {
+
+  const { user } = useUserContext();
+
   return (
 
   <View style={styles.tudo}>
@@ -24,7 +28,7 @@ export default function HomeScreen({ navigation }) {
     </View>
 
   
-    <Text style={styles.textoPromocoes}> Cárdapio do dia</Text>
+    <Text style={styles.textoPromocoes}>Bem vindo {user.name}, Promoções cárdapio {"\n"} do dia</Text>
     <View style={styles.caixahome}> <Text> </Text><View style={styles.caixahome2}></View></View>
     <View style={styles.caixahome}> <Text> </Text><View style={styles.caixahome2}></View></View>
     <View style={styles.caixahome}> <Text> </Text><View style={styles.caixahome2}></View></View>
