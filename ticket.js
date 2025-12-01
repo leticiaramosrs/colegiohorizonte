@@ -15,11 +15,18 @@ export default function TicketScreen({ navigation }) {
     const SEGUNDOS_24H = 24 * 60 * 60;
     const [restante, setRestante] = useState(0);
     const [podeReceber, setPodeReceber] = useState(false);
+    const [saldo, setSaldo] = useState(0);
+    
+    
+    
 
     // Carrega o último ticket
     useEffect(() => {
       async function carregar() {
         const ultimo = await AsyncStorage.getItem('ultimo_ticket');
+        const saldoAtual = await AsyncStorage.getItem('saldo_tickets');
+        
+        setSaldo(Number(saldoAtual) || 0);
 
         if (!ultimo) {
           setPodeReceber(true);
@@ -34,7 +41,7 @@ export default function TicketScreen({ navigation }) {
           setPodeReceber(true);
           setRestante(0);
         } else {
-          setPodeReceber(false);
+          setPodeReceber(true);
           setRestante(SEGUNDOS_24H - segundosPassados);
         }
       }
@@ -76,28 +83,36 @@ export default function TicketScreen({ navigation }) {
 
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', marginTop: 50 }}>
-        {podeReceber ? (
-          <TouchableOpacity
-            onPress={receber}
-            style={{
-              position: 'absolute',
-              justifyContent: 'center',
-              alignItems: 'center',
-              backgroundColor: 'pink',
-              padding: 20,
-              bottom: 100,
-              borderRadius: 16,
-              marginBottom: 20
-            }}>
-            <Text style={{ fontSize: 22, fontWeight: 'bold' }}>
-              🎉 Receber Ticket
-            </Text>
-          </TouchableOpacity>
-        ) : (
-          <Text style={{ fontSize: 40, fontWeight: 'bold', marginBottom: 20 }}>
+  
+        <Text style={{ fontSize: 26, fontWeight: 'bold', marginBottom: 20 }}>
+          🎟 Saldo: {saldo}
+        </Text>
+  
+        <TouchableOpacity
+         
+          disabled={!podeReceber}
+          style={{
+            position: 'absolute',
+            justifyContent: 'center',
+            alignItems: 'center',
+            backgroundColor: podeReceber ? 'pink' : '#b8b8b8',
+            width: 250,
+            padding: 20,
+            bottom: 100,
+            borderRadius: 16,
+            marginBottom: 20
+          }}>
+          <Text style={{ fontSize: 22, fontWeight: 'bold', color: podeReceber ? 'black' : '#444' }}>
+            🎉 Receber Ticket
+          </Text>
+        </TouchableOpacity>
+  
+        {!podeReceber && (
+          <Text style={{ fontSize: 30, fontWeight: 'bold', marginTop: 140 }}>
             {formatar(restante)}
           </Text>
         )}
+  
       </View>
     );
   }
@@ -130,7 +145,6 @@ export default function TicketScreen({ navigation }) {
           onPress={() => navigation.navigate("Carrinho")}>
         </TouchableOpacity>
       </View>
-
 
     </View>
   );

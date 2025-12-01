@@ -1,0 +1,149 @@
+usuario
+
+import { createContext, useState } from "react";
+
+export const AuthContext = createContext();
+
+export function AuthProvider({ children }) {
+  const [user, setUser] = useState(null);
+
+  function login(usuario) {
+    setUser(usuario);
+  }
+
+  function logout() {
+    setUser(null);
+  }
+
+  return (
+    <AuthContext.Provider value={{ user, login, logout }}>
+      {children}
+    </AuthContext.Provider>
+  );
+}
+
+===================================================================================
+
+carrinho 
+
+import { createContext, useState } from "react";
+
+export const CartContext = createContext();
+
+export function CartProvider({ children }) {
+  const [cart, setCart] = useState([]);
+
+  function addToCart(item) {
+    setCart(prev => [...prev, item]);
+  }
+
+  function removeFromCart(id) {
+    setCart(prev => prev.filter(item => item.id !== id));
+  }
+
+  function clearCart() {
+    setCart([]);
+  }
+
+  return (
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart }}>
+      {children}
+    </CartContext.Provider>
+  );
+}
+
+======================================================================================
+
+Envolver tudo no App.js
+
+import React from "react";
+import { AuthProvider } from "./AuthContext";
+import { CartProvider } from "./CartContext";
+import Routes from "./Routes"; // suas telas
+
+export default function App() {
+  return (
+    <AuthProvider>
+      <CartProvider>
+        <Routes />
+      </CartProvider>
+    </AuthProvider>
+  );
+}
+ 
+==========================================================================================
+
+Usando o Context do Usuário em qualquer tela
+Exemplo: Login
+
+import { useContext } from "react";
+import { AuthContext } from "./AuthContext";
+
+export default function Login() {
+  const { login } = useContext(AuthContext);
+
+  function handleLogin() {
+    login({
+      id: 1,
+      nome: "Gabriel",
+      email: "gabriel@gmail.com"
+    });
+  }
+
+  return <Button title="Entrar" onPress={handleLogin} />;
+}
+
+Exemplo: Perfil
+
+import { useContext } from "react";
+import { AuthContext } from "./AuthContext";
+
+export default function Perfil() {
+  const { user, logout } = useContext(AuthContext);
+
+  return (
+    <>
+      <Text>Nome: {user?.nome}</Text>
+      <Button title="Sair" onPress={logout} />
+    </>
+  );
+}
+
+
+===========================================================================================
+
+. Usando o Context do Carrinho
+Adicionar ao carrinho
+
+import { useContext } from "react";
+import { CartContext } from "./CartContext";
+
+export default function Produto({ produto }) {
+  const { addToCart } = useContext(CartContext);
+
+  return (
+    <Button
+      title="Adicionar ao Carrinho"
+      onPress={() => addToCart(produto)}
+    />
+  );
+}
+
+Mostrar carrinho
+
+import { useContext } from "react";
+import { CartContext } from "./CartContext";
+
+export default function Carrinho() {
+  const { cart, removeFromCart, clearCart } = useContext(CartContext);
+
+  return (
+    <>
+      {cart.map(item => (
+        <Text key={item.id}>{item.nome}</Text>
+      ))}
+
+      <Button title="Limpar" onPress={clearCart} />
+    </>
+  );
+}
