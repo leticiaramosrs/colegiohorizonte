@@ -41,9 +41,9 @@ export default function LoginComumScreen({ navigation }) {
 //============================================================= 
 */}
 
-          <Text style={styles.texto}>Matricula</Text>
+          <Text style={styles.texto}>Nome completo</Text>
           <TextInput
-            placeholder="Digite sua matricula"
+            placeholder="Digite seu nome"
             value={nome}
             onChangeText={setNome}
             style={styles.input1}
@@ -55,9 +55,9 @@ export default function LoginComumScreen({ navigation }) {
 //============================================================= 
 */}
 
-          <Text style={styles.texto}>Senha</Text>
+          <Text style={styles.texto}>Matrícula</Text>
           <TextInput
-            placeholder="Digite sua senha"
+            placeholder="Digite sua matrícula"
             value={senha}
             onChangeText={setSenha}
             style={styles.input1}

@@ -11,6 +11,7 @@ import { UserProvider } from './UserContext';
 //=============================================================
 
 import HomeScreen from './home';
+import Tabs from './Tabs';
 import LoginComumScreen from './loginComum';
 import LojaScreen from './loja';
 import LoginadmScreen from './loginAdm';
@@ -19,6 +20,7 @@ import PerfilScreen from './Perfil';
 import TicketScreen from './ticket';
 import Usuarios from './usuarios';
 import UsuariosCadastrados from './usuariosCadastrados'
+
 
 //=============================================================
 // Criação e nomeamento de Telas
@@ -32,6 +34,12 @@ export default function App() {
     <UserProvider>
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
+
+      <Stack.Screen 
+          name="Tabs" 
+          component={Tabs}
+        />
+
         <Stack.Screen 
           name="LoginComum" 
           component={LoginComumScreen} 

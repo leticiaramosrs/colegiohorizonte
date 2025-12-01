@@ -121,6 +121,12 @@ export default StyleSheet.create({
     fontWeight: 'bold',
 
   },
+  textocar: {
+    height: 800,
+    width:200,
+    top: 30,
+   
+  },
 
   // ----- Ícones -----
   icones1: {
@@ -132,8 +138,8 @@ export default StyleSheet.create({
 
   seta: {
 
-  top: -20,
-  left: -110,
+  top: 20,
+  left: 20,
   position: 'absolute',
  
   },
@@ -185,16 +191,7 @@ export default StyleSheet.create({
   // },
 
   // ----- Barras -----
-  barraNoCantoInferior: {
-    position: 'absolute',
-    bottom: 0,
-    width: "100vw",
-    backgroundColor: "rgb(248, 106, 149)",
   
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row',
-  },
 
   barraNoCantoSuperior: {
     position: 'absolute',
