@@ -11,9 +11,9 @@ import { UserProvider } from './UserContext';
 //=============================================================
 
 import HomeScreen from './home';
-import LoginComumScreen from './loginComum';
+import LoginAlunoScreen from './loginAluno';
 import LojaScreen from './loja';
-import LoginadmScreen from './loginAdm';
+import LoginAdminScreen from './loginAdmin';
 import CarrinhoScreen from './carrinho';
 import PerfilScreen from './Perfil';
 import TicketScreen from './ticket';
@@ -33,13 +33,13 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen 
-          name="LoginComum" 
-          component={LoginComumScreen} 
+          name="LoginAluno" 
+          component={LoginAlunoScreen} 
           />
 
         <Stack.Screen
-          name="LoginDeAdm"
-          component={LoginadmScreen}
+          name="LoginAdmin"
+          component={LoginAdminScreen}
           />
 
         <Stack.Screen

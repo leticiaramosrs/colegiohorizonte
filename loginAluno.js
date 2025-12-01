@@ -3,19 +3,16 @@ import { useState } from 'react';
 import styles from './styles'; // importa os estilos de outro arquivo
 import { useUserContext } from "./UserContext"
 
-export default function LoginComumScreen({ navigation }) {
-  const { login, user } = useUserContext();
-  const [nome, setNome] = useState('')
-  const [senha, setSenha] = useState('')
+export default function LoginAlunoScreen({ navigation }) {
+  const { loginAluno, usuarioAluno } = useUserContext();
+  const [nomeAluno, setNomeAluno] = useState('')
+  const [senhaAluno, setSenhaAluno] = useState('')
 
   function handleLogin(){
-    login({ name: nome, role: "estudante" });
-    console.log(nome,senha)
+    loginAluno({ nomeAluno, senhaAluno, cargo: "estudante" });
+    console.log("Nome:" + nomeAluno + "Senha:" + senhaAluno)
   }
-  const newLocal = <TouchableOpacity style={styles.botaozinho}
-    onPress={() => navigation.navigate("Home")}>
-    <Text style={styles.textodobotaozinho}>Entrar</Text>
-  </TouchableOpacity>;
+
   return (
     
     <View style={styles.tudo}>
@@ -25,7 +22,7 @@ export default function LoginComumScreen({ navigation }) {
           <Image style={styles.logo} source={require('./assets/logoColegiocopia1.png')}></Image>
         </View>
 
-        {/*
+{/*
 //=============================================================
 // Titulo e View de inputs na Tela de Login estudante
 //============================================================= 
@@ -34,7 +31,7 @@ export default function LoginComumScreen({ navigation }) {
         <Text style={styles.textodecima}>Entre como estudante </Text>
         <View style={styles.inputs}>
 
-          {/*
+{/*
 //=============================================================
 // Input de Matricula na Tela de Login estudante
 //============================================================= 
@@ -43,8 +40,8 @@ export default function LoginComumScreen({ navigation }) {
           <Text style={styles.texto}>Matricula</Text>
           <TextInput
             placeholder="Digite sua matricula"
-            value={nome}
-            onChangeText={setNome}
+            value={nomeAluno}
+            onChangeText={setNomeAluno}
             style={styles.input1}
           />
 
@@ -57,12 +54,18 @@ export default function LoginComumScreen({ navigation }) {
           <Text style={styles.texto}>Senha</Text>
           <TextInput
             placeholder="Digite sua senha"
-            value={senha}
-            onChangeText={setSenha}
+            value={senhaAluno}
+            onChangeText={setSenhaAluno}
             style={styles.input1}
             secureTextEntry
           />
         </View>
+
+{/*
+//=============================================================
+// Botões na Tela de Login Admin
+//============================================================= 
+*/}
 
         <TouchableOpacity style={styles.botaozinho}
           onPress={() => {
@@ -70,10 +73,9 @@ export default function LoginComumScreen({ navigation }) {
             navigation.navigate("Home")}}>
           <Text style={styles.textodobotaozinho}>Entrar</Text>
         </TouchableOpacity>
-    {newLocal}
 
         <TouchableOpacity style={styles.contaadmin}
-          onPress={() => navigation.navigate("LoginDeAdm")}>
+          onPress={() => navigation.navigate("LoginAdmin")}>
           <Text style={styles.textodeadmin}>Entre como Admin</Text>
         </TouchableOpacity>
 
