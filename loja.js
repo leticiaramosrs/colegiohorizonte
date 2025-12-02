@@ -30,29 +30,7 @@ export default function LojaScreen({ navigation }) {
 
     </View>
 
-    <View style={styles.barraNoCantoInferior}>
-
-<TouchableOpacity style={styles.icones1}
-    onPress={() => navigation.navigate("Home")}>
-       <FontAwesome6 name="house" size={34} color="black" style={styles.icones1}/>
-  </TouchableOpacity>
-
-  <TouchableOpacity style={styles.icones1}
-    onPress={() => navigation.navigate("Loja")}>
-    <Foundation name="shopping-cart" size={40} color="black" style={styles.icones1}/>
-  </TouchableOpacity>
-
-  <TouchableOpacity style={styles.icones1}
-    onPress={() => navigation.navigate("Ticket")}>
-    <Entypo name="ticket" size={36} color="black" style={styles.icones1}/>
-  </TouchableOpacity>
-
-  <TouchableOpacity style={styles.icones1}
-    onPress={() => navigation.navigate("LoginComum")}>
-    <Ionicons name="settings-outline" size={36} color="black" style={styles.icones1}/>
-  </TouchableOpacity>
-
-  </View>
+   
   </View>
 
 

@@ -5,6 +5,8 @@ import Foundation from '@expo/vector-icons/Foundation';
 import Entypo from '@expo/vector-icons/Entypo';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useUserContext } from "./UserContext";
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
 
 // const comidas = ['Doce gatinho', 'Kalzones']
 // const sucos = ['Água', 'Sucos']
@@ -22,7 +24,7 @@ export default function HomeScreen({ navigation }) {
     <View style={styles.barraNoCantoSuperior}>
 
         <TouchableOpacity style={styles.bolaDePerfilBotao}
-      onPress={() => navigation.navigate("Perfil")}>
+      onPress={() => navigation.navigate("Configurações")}>
           <Ionicons name="person-circle" size={60} color="pink" style={styles.bolaDePerfilSimbolo} />
     </TouchableOpacity>
 
@@ -44,7 +46,7 @@ export default function HomeScreen({ navigation }) {
       )}
     />
 
-  <View style={styles.barraNoCantoInferior}>
+  {/*<View style={styles.barraNoCantoInferior}>
 
   <TouchableOpacity style={styles.icones1}
       onPress={() => navigation.navigate("Home")}>
@@ -66,7 +68,7 @@ export default function HomeScreen({ navigation }) {
       <Ionicons name="settings-outline" size={36} color="black" style={styles.icones1}/>
     </TouchableOpacity>
     
-  </View>
+  </View> */}
   </View>
   );
 }

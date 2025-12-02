@@ -144,6 +144,12 @@ export default StyleSheet.create({
     fontWeight: 'bold',
 
   },
+  textocar: {
+    height: 800,
+    width:200,
+    top: 30,
+   
+  },
 
   //============================================================= 
   // Ícones
@@ -158,8 +164,8 @@ export default StyleSheet.create({
 
   seta: {
 
-  top: -20,
-  left: -110,
+  top: 20,
+  left: 20,
   position: 'absolute',
  
   },
