@@ -36,7 +36,7 @@ export default function App() {
       <Stack.Navigator screenOptions={{ headerShown: false }}>
 
 
-        <Stack.Screen 
+        <Stack.Screen
           name="LoginAluno" 
           component={LoginAlunoScreen} 
           />
