@@ -6,7 +6,7 @@ import Entypo from '@expo/vector-icons/Entypo';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useUserContext } from "./UserContext";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import transporte from './loginAluno'import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 // const comidas = ['Doce gatinho', 'Kalzones']
@@ -30,7 +30,8 @@ export default function HomeScreen({ navigation }) {
     </TouchableOpacity>
 
     <View style={styles.boasVindasFundo}>
-    <Text style={styles.boasVindas}>Bem vindo {nome}</Text>
+    <Text style={styles.boasVindas}>Bem Vindo!!!</Text>
+    <Text>{transporte}</Text>
     </View>
 
     </View>

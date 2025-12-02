@@ -5,7 +5,12 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { UserProvider } from './UserContext';
 
-// Telas
+//=============================================================
+// Telas Importadas
+//=============================================================
+
+import HomeScreen from './home';
+import TabsScreen from './Tabs';
 import LoginAlunoScreen from './loginAluno';
 import LoginAdminScreen from './loginAdmin';
 import MainLayout from './MainLayout';
@@ -15,6 +20,9 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <UserProvider>
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
 
