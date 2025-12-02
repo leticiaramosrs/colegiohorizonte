@@ -5,6 +5,10 @@ import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import Foundation from '@expo/vector-icons/Foundation';
 import Entypo from '@expo/vector-icons/Entypo';
 
+//=============================================================
+// Telas Importadas
+//=============================================================
+
 import HomeScreen from './home';
 import LojaScreen from './loja';
 import TicketScreen from './ticket';
@@ -12,7 +16,8 @@ import PerfilScreen from './Perfil'; // sua tela de configurações
 
 const Tab = createBottomTabNavigator();
 
-export default function Tabs() {
+
+export default function TabsScreen() {
   return (
     <Tab.Navigator 
       screenOptions={{
