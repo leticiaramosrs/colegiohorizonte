@@ -1,92 +1,40 @@
-//=============================================================
-// Importações de navegação / Etc
-//=============================================================
-
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import React from 'react';
+import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 import { UserProvider } from './UserContext';
 
-//=============================================================
-// Telas Importadas
-//=============================================================
-
-import HomeScreen from './home';
-import Tabs from './Tabs';
+// Telas
 import LoginAlunoScreen from './loginAluno';
-import LojaScreen from './loja';
 import LoginAdminScreen from './loginAdmin';
-import CarrinhoScreen from './carrinho';
-import PerfilScreen from './Perfil';
-import TicketScreen from './ticket';
-import Usuarios from './usuarios';
-import UsuariosCadastrados from './usuariosCadastrados'
-
-
-//=============================================================
-// Criação e nomeamento de Telas
-//=============================================================
+import MainLayout from './MainLayout';
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-
     <UserProvider>
-    <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
-
-        <Stack.Screen 
-          name="LoginAluno" 
-          component={LoginAlunoScreen} 
-          />
-
-        <Stack.Screen
-          name="LoginAdmin"
-          component={LoginAdminScreen}
-          />
+      <NavigationContainer>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
 
           <Stack.Screen 
-          name="Tabs" 
-          component={Tabs}
-        />
-
-        <Stack.Screen
-          name="Home"
-          component={HomeScreen}
+            name="LoginAluno" 
+            component={LoginAlunoScreen} 
           />
 
           <Stack.Screen
-          name="Carrinho"
-          component={CarrinhoScreen}
-          />
-
-        <Stack.Screen 
-          name="Loja" 
-          component={LojaScreen} 
+            name="LoginAdmin"
+            component={LoginAdminScreen}
           />
 
           <Stack.Screen 
-          name="Perfil" 
-          component={PerfilScreen} 
+            name="Main" 
+            component={MainLayout} 
           />
 
-        <Stack.Screen 
-          name="Ticket" 
-          component={TicketScreen} 
-          />
-{/* 
-        <Stack.Screen 
-          name="Usuarios" 
-          component={Usuarios} 
-          />
-
-        <Stack.Screen 
-          name="UsuariosCadastrados" 
-          component={UsuariosCadastrados} 
-          /> 
-*/}
-      </Stack.Navigator>
-    </NavigationContainer>
+        </Stack.Navigator>
+      </NavigationContainer>
     </UserProvider>
   );
 }

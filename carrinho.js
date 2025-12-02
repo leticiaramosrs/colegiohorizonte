@@ -1,5 +1,5 @@
 import { Text, View, TouchableOpacity } from 'react-native';
-import styles from './styles';
+import styles from '../styles';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { useEffect, useState } from 'react';
 

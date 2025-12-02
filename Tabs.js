@@ -8,7 +8,7 @@ import Entypo from '@expo/vector-icons/Entypo';
 import HomeScreen from './home';
 import LojaScreen from './loja';
 import TicketScreen from './ticket';
-import PerfilScreen from './Perfil'; // sua tela de configurações
+import PerfilScreen from './PerfilAluno';
 
 const Tab = createBottomTabNavigator();
 
@@ -26,7 +26,7 @@ export default function Tabs() {
         name="Home"
         component={HomeScreen}
         options={{
-          tabBarIcon: ({ color, size }) => (
+          tabBarIcon: ({ color }) => (
             <FontAwesome6 name="house" size={28} color={color} />
           ),
         }}
@@ -36,7 +36,7 @@ export default function Tabs() {
         name="Loja"
         component={LojaScreen}
         options={{
-          tabBarIcon: ({ color, size }) => (
+          tabBarIcon: ({ color }) => (
             <Foundation name="shopping-cart" size={32} color={color} />
           ),
         }}
@@ -46,7 +46,7 @@ export default function Tabs() {
         name="Ticket"
         component={TicketScreen}
         options={{
-          tabBarIcon: ({ color, size }) => (
+          tabBarIcon: ({ color }) => (
             <Entypo name="ticket" size={30} color={color} />
           ),
         }}
@@ -56,7 +56,7 @@ export default function Tabs() {
         name="Configurações"
         component={PerfilScreen}
         options={{
-          tabBarIcon: ({ color, size }) => (
+          tabBarIcon: ({ color }) => (
             <Ionicons name="settings-outline" size={30} color={color} />
           ),
         }}
