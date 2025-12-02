@@ -3,57 +3,47 @@ import { createContext, useContext, useState } from "react";
 const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
-  const [usuarioAluno, setUsuarioAluno] = useState({
-    cargo: "",
-    nomeAluno: "",
-    senhaAluno: "",
-  });
+
+//=============================================================
+// Informações de Login para Admins
+//============================================================= 
 
   const [usuarioAdmin, setUsuarioAdmin] = useState({
-    cargo: "",
-    nomeAdmin: "",
-    senhaAdmin: "",
+    cargo: "Admin", // Cargo de Admin ( ' v')
+    nomeAdmin: ["t", "Taylor", "Leticia,", "Katiely"], // nome de cada Admin, que coisa ruim de se fazer - . -
+    senhaAdmin: ["1", "123", "abc", "admin123"], // Senha de cada Admin ' v '
   });
 
-  const loginAluno = (userData) => {
-    setUsuarioAluno({
-      cargo: "estudante",
-      nomeAluno: userData.nomeAluno,
-      senhaAluno: userData.senhaAluno,
-    });
-
-    // garante que admin não fica "logado"
+  const loginAdmin = () => {
     setUsuarioAdmin({
-      cargo: "",
-      nomeAdmin: "",
-      senhaAdmin: "",
+      cargo: "Admin",
+      nomeAdmin: ["t", "Taylor", "Leticia,", "Katiely"],
+      senhaAdmin: ["1", "123", "abc", "admin123"],
     });
   };
+  
+//=============================================================
+// Informações de Login para Alunos
+//============================================================= 
 
-  const loginAdmin = (userData) => {
-    setUsuarioAdmin({
-      cargo: "admin",
-      nomeAdmin: userData.nomeAdmin,
-      senhaAdmin: userData.senhaAdmin,
-    });
+  const [usuarioAluno, setUsuarioAluno] = useState({
+    cargo: "Aluno",
+    nomeAluno: ["Cesar", "Diego", "Gustavo", "Luiz", "Pascal", "Davi"],
+    senhaAluno: ["parangaricutirimicuaro", "wh", "hornet", "27112024", "Pascal", "zzz"],
+  });
 
-    // garante que aluno não fica "logado"
+  const loginAluno = () => {
     setUsuarioAluno({
-      cargo: "",
-      nomeAluno: "",
-      senhaAluno: "",
+      cargo: "Aluno",
+      nomeAluno: ["Cesar", "Diego", "Gustavo", "Luiz", "Pascal", "Davi"],
+      senhaAluno: ["parangaricutirimicuaro", "wh", "hornet", "27112024", "Pascal", "zzz"],
     });
   };
 
   return (
     <UserContext.Provider 
-      value={{ 
-        usuarioAluno, 
-        usuarioAdmin, 
-        loginAluno, 
-        loginAdmin 
-      }}
-    >
+      value={{ usuarioAluno, usuarioAdmin, loginAluno, loginAdmin }}>
+
       {children}
     </UserContext.Provider>
   );

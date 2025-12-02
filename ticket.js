@@ -89,7 +89,7 @@ export default function TicketScreen({ navigation }) {
         </Text>
   
         <TouchableOpacity
-         onPress={receber}
+          onPress={receber}
           disabled={!podeReceber}
           style={{
             position: 'absolute',

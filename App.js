@@ -11,7 +11,7 @@ import { UserProvider } from './UserContext';
 //=============================================================
 
 import HomeScreen from './home';
-import Tabs from './Tabs';
+import TabsScreen from './Tabs';
 import LoginAlunoScreen from './loginAluno';
 import LojaScreen from './loja';
 import LoginAdminScreen from './loginAdmin';
@@ -35,12 +35,8 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
 
-      <Stack.Screen 
-          name="Tabs" 
-          component={Tabs}
-        />
 
-        <Stack.Screen 
+        <Stack.Screen
           name="LoginAluno" 
           component={LoginAlunoScreen} 
           />
@@ -48,6 +44,11 @@ export default function App() {
         <Stack.Screen
           name="LoginAdmin"
           component={LoginAdminScreen}
+          />
+
+          <Stack.Screen
+            name="Tabs"
+            component={TabsScreen}
           />
 
         <Stack.Screen
