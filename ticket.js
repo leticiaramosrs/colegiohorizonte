@@ -41,7 +41,7 @@ export default function TicketScreen({ navigation }) {
           setPodeReceber(true);
           setRestante(0);
         } else {
-          setPodeReceber(true);
+          setPodeReceber(false);
           setRestante(SEGUNDOS_24H - segundosPassados);
         }
       }
@@ -89,7 +89,7 @@ export default function TicketScreen({ navigation }) {
         </Text>
   
         <TouchableOpacity
-         
+         onPress={receber}
           disabled={!podeReceber}
           style={{
             position: 'absolute',
