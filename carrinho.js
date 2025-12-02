@@ -14,7 +14,7 @@ export default function CarrinhoScreen({navigation}) {
 
 
       <TouchableOpacity style={styles.seta}
-          onPress={() => navigation.navigate("Loja")}>
+          onPress={() => navigation.navigate("Tabs")}>
     <FontAwesome name="arrow-left" size={35} color="rgb(244, 11, 93)" />
     </TouchableOpacity>
       </View>
