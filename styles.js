@@ -97,7 +97,6 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     color:"rgb(244, 11, 93)",
-    backgroundColor:"rgb(255, 170, 198)",
     width: 250,
     height: 50,
   },
@@ -219,6 +218,7 @@ export default StyleSheet.create({
   //============================================================= 
 
   barraNoCantoInferior: {
+    flex: 'container',
     position: 'absolute',
     bottom: 0,
     width: "100vw",
@@ -320,9 +320,20 @@ export default StyleSheet.create({
     width: 250,
     height: 50,
     position: "absolute",
+    borderRadius: 100,
   },
 
   
-
+  listaDeAlimentos: {
+    top: 110,
+    justifyContent:'center',
+    alignItems: 'center',
+    width: 400,
+    height: 80,
+    backgroundColor: 'gray',
+    borderWidth: 1,
+    margin: 2,
+    borderRadius: 20,
+  },
 }
 );

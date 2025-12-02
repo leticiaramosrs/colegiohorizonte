@@ -1,10 +1,14 @@
-import { Text, TouchableOpacity, View } from 'react-native';
+import { Text, TouchableOpacity, View, FlatList } from 'react-native';
 import styles from './styles'; // importa os estilos de outro arquivo
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import Foundation from '@expo/vector-icons/Foundation';
 import Entypo from '@expo/vector-icons/Entypo';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useUserContext } from "./UserContext";
+
+// const comidas = ['Doce gatinho', 'Kalzones']
+// const sucos = ['Água', 'Sucos']
+const alimentos = ['Doce gatinho', 'brigadeiro', 'Kalzone de frango', 'Kalzone de carne', 'Pizza', 'Água', 'suco de uva', 'suco de maçã', 'suco de laranja']
 
 export default function HomeScreen({ navigation }) {
 
@@ -27,12 +31,18 @@ export default function HomeScreen({ navigation }) {
     </View>
 
     </View>
+
     <Text style={styles.textoPromocoes}>Promoções e cárdapio do dia</Text>
-    <View style={styles.caixahome}> <Text> </Text><View style={styles.caixahome2}></View></View>
-    <View style={styles.caixahome}> <Text> </Text><View style={styles.caixahome2}></View></View>
-    <View style={styles.caixahome}> <Text> </Text><View style={styles.caixahome2}></View></View>
-    <View style={styles.caixahome}> <Text> </Text><View style={styles.caixahome2}></View></View>
-    <View style={styles.caixahome}> <Text> </Text><View style={styles.caixahome2}></View></View>
+
+    <FlatList
+      data={alimentos}
+      keyExtractor={(item, alimento) => alimento.toString()}
+      renderItem={({ item }) => ( 
+      <View style={styles.listaDeAlimentos}>
+        <Text>{item}</Text>
+      </View>
+      )}
+    />
 
   <View style={styles.barraNoCantoInferior}>
 
@@ -60,3 +70,17 @@ export default function HomeScreen({ navigation }) {
   </View>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+//       <View style={styles.caixahome2}></View>

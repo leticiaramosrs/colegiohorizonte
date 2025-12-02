@@ -11,7 +11,7 @@ export const UserProvider = ({ children }) => {
 
   const [usuarioAdmin, setUsuarioAdmin] = useState({
     cargo: "",
-    nomeAdmin: "",
+    nomeAdmin: ["Taylor", "Leticia,", "Katiely"],
     senhaAdmin: "",
   });
 
