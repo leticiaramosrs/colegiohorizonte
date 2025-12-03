@@ -87,7 +87,7 @@ export default function LoginAdminScreen({ navigation }) {
       <TouchableOpacity 
         style={styles.botaozinho}
         onPress={() => { handleLogin(); 
-        navigation.navigate("Tabs"); }}>
+        navigation.navigate("Main"); }}>
         <Text style={styles.textodobotaozinho}>Entrar</Text>
       </TouchableOpacity>
 

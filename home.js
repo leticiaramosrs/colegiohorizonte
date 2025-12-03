@@ -6,7 +6,8 @@ import Entypo from '@expo/vector-icons/Entypo';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useUserContext } from "./UserContext";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import transporte from './loginAluno'
+import transporte from './loginAluno'import { SafeAreaView } from 'react-native-safe-area-context';
+
 
 // const comidas = ['Doce gatinho', 'Kalzones']
 // const sucos = ['Água', 'Sucos']
@@ -18,8 +19,8 @@ export default function HomeScreen({ navigation }) {
   const nome = usuarioAluno.nomeAluno || usuarioAdmin.nomeAdmin;
 
   return (
-
-  <View style={styles.tudo}>
+<>
+  <SafeAreaView style={styles.tudo}>
 
     <View style={styles.barraNoCantoSuperior}>
 
@@ -70,7 +71,8 @@ export default function HomeScreen({ navigation }) {
     </TouchableOpacity>
     
   </View> */}
-  </View>
+  </SafeAreaView>
+  </>
   );
 }
 
