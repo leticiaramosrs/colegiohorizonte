@@ -67,12 +67,22 @@ export default function TicketScreen({ navigation }) {
     }, [podeReceber]);
 
     // Função para receber ticket
-    const receber = async () => {
-      setPodeReceber(false);
-      setRestante(SEGUNDOS_24H);
-      await AsyncStorage.setItem('ultimo_ticket', String(Date.now()));
-    };
+const receber = async () => {
+  // Marca como recebido
+  setPodeReceber(false);
+  setRestante(SEGUNDOS_24H);
 
+  // Atualiza o horário do último ticket
+  await AsyncStorage.setItem('ultimo_ticket', String(Date.now()));
+
+  // Atualiza o saldo
+  const saldoAtual = await AsyncStorage.getItem('saldo_tickets');
+  const novoSaldo = (Number(saldoAtual) || 0) + 1;
+
+  await AsyncStorage.setItem('saldo_tickets', String(novoSaldo));
+
+  setSaldo(novoSaldo); // <- Atualiza a tela imediatamente
+};
     // Formatador de tempo
     const formatar = (s) => {
       const h = String(Math.floor(s / 3600)).padStart(2, "0");
