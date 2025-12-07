@@ -23,9 +23,6 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
 
-      <NavigationContainer>
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
-
           <Stack.Screen 
             name="LoginAluno" 
             component={LoginAlunoScreen} 

@@ -15,20 +15,17 @@ function TopTabsWithMenu({ navigation }) {
     <TopTab.Navigator
       screenOptions={{
         tabBarShowLabel: false,
-        tabBarStyle: { backgroundColor: "#fff", height: 60,marginTop:35 },
+        tabBarStyle: { backgroundColor: "#7b4949ff", height: 60,marginTop:35 },
       }}
     >
       <TopTab.Screen
         name="MenuButton"
-        component={Tabs} 
-        options={{
-          tabBarIcon: () => (
+          component={MainLayout} 
+            options={{ tabBarIcon: () => (
             <TouchableOpacity onPress={() => navigation.openDrawer()}>
               <Ionicons name="menu" size={28} color="black" />
             </TouchableOpacity>
-          )
-        }}
-      />
+          )}}/>
     </TopTab.Navigator>
   );
 }

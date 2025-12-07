@@ -4,9 +4,9 @@ import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import Foundation from '@expo/vector-icons/Foundation';
 import Entypo from '@expo/vector-icons/Entypo';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { useUserContext } from "./UserContext";
+import { levaUserContext } from "./UserContext";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import transporte from './loginAluno'import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 // const comidas = ['Doce gatinho', 'Kalzones']
@@ -15,8 +15,9 @@ const alimentos = ['Doce gatinho', 'brigadeiro', 'Kalzone de frango', 'Kalzone d
 
 export default function HomeScreen({ navigation }) {
 
-  const { usuarioAluno, usuarioAdmin } = useUserContext();
+  const { usuarioAluno, usuarioAdmin } = levaUserContext();
   const nome = usuarioAluno.nomeAluno || usuarioAdmin.nomeAdmin;
+  // const { transporteTeste } = levaUserContext(); // Teste para ver como a passagem de informações funciona
 
   return (
 <>
@@ -31,7 +32,7 @@ export default function HomeScreen({ navigation }) {
 
     <View style={styles.boasVindasFundo}>
     <Text style={styles.boasVindas}>Bem Vindo!!!</Text>
-    <Text>{transporte}</Text>
+    {/* <Text>{transporteTeste}</Text> */}
     </View>
 
     </View>

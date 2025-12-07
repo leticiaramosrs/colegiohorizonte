@@ -1,6 +1,10 @@
 import { createContext, useContext, useState } from "react";
 
-const UserContext = createContext();
+const UserContext = createContext(); // Const que irá guardar as informações de usuario
+// const transporteTeste = "funcionou"; // Teste para ver como a passagem de informações funciona
+
+// Como ela funciona? você irá dar valor a uma variavel e coloca-la denntro de uma "caixa" no provider, que irá guardar e
+// transportar a informação para uma outra tela, que coiso maligno ' v '
 
 export const UserProvider = ({ children }) => {
 
@@ -28,25 +32,34 @@ export const UserProvider = ({ children }) => {
 
   const [usuarioAluno, setUsuarioAluno] = useState({
     cargo: "Aluno",
-    nomeAluno: ["Cesar", "Diego", "Gustavo", "Luiz", "Pascal", "Davi"],
-    senhaAluno: ["parangaricutirimicuaro", "wh", "hornet", "27112024", "Pascal", "zzz"],
+      nomeAluno: ["t", "Cesar", "Diego", "Gustavo", "Luiz", "Pascal", "Davi"],
+      senhaAluno: ["t", "parangaricutirimicuaro", "wh", "hornet", "27112024", "Pascal", "zzz"],
   });
 
   const loginAluno = () => {
     setUsuarioAluno({
       cargo: "Aluno",
-      nomeAluno: ["Cesar", "Diego", "Gustavo", "Luiz", "Pascal", "Davi"],
-      senhaAluno: ["parangaricutirimicuaro", "wh", "hornet", "27112024", "Pascal", "zzz"],
+      nomeAluno: ["t", "Cesar", "Diego", "Gustavo", "Luiz", "Pascal", "Davi"],
+      senhaAluno: ["t", "parangaricutirimicuaro", "wh", "hornet", "27112024", "Pascal", "zzz"],
     });
   };
 
   return (
+    // Isso está dando informações para o UserContext e o .Provider vai ser o responsavel por guardar as informações
     <UserContext.Provider 
-      value={{ usuarioAluno, usuarioAdmin, loginAluno, loginAdmin }}>
+      value={{
+      usuarioAluno,  // Faz guardar os dados de usuarioAluno
+      usuarioAdmin, // Faz guardar os dados de usuarioAdmin
+      loginAluno,  // Faz guardar os dados de loginAluno
+      loginAdmin, // Faz guardar os dados de loginAdmin 
+      // transporteTeste   // não faz nada por ter sumido ' v' por estar comentado
+      }}>
 
-      {children}
+{/* É essencial para o funcionamento do provider, ele representa qualquer componente escrito dentro do Provider. */}
+       {children} 
     </UserContext.Provider>
   );
 };
 
-export const useUserContext = () => useContext(UserContext);
+// 
+export const levaUserContext = () => useContext(UserContext);
