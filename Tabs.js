@@ -1,4 +1,3 @@
-import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
@@ -16,14 +15,15 @@ import PerfilScreen from './PerfilAluno';
 
 const Tab = createBottomTabNavigator();
 
+// Produtos
 
 export default function TabsScreen() {
   return (
     <Tab.Navigator 
       screenOptions={{
-        headerShown: false,
-        tabBarStyle: { backgroundColor: 'white', height: 70 },
-        tabBarLabelStyle: { fontSize: 12, marginBottom: 8 },
+      tabBarShowLabel: false,
+      headerShown: false,
+      tabBarStyle: { backgroundColor: 'pink', height: 70 },
       }}
     >
 
@@ -31,8 +31,8 @@ export default function TabsScreen() {
         name="Home"
         component={HomeScreen}
         options={{
-          tabBarIcon: ({ color }) => (
-            <FontAwesome6 name="house" size={28} color={color} />
+          tabBarIcon: () => (
+            <FontAwesome6 name="house" size={32} color={"rgba(239, 71, 96, 1)"} />
           ),
         }}
       />
@@ -41,8 +41,8 @@ export default function TabsScreen() {
         name="Loja"
         component={LojaScreen}
         options={{
-          tabBarIcon: ({ color }) => (
-            <Foundation name="shopping-cart" size={32} color={color} />
+          tabBarIcon: () => (
+            <Foundation name="shopping-cart" size={32} color={"rgba(239, 71, 96, 1)"} />
           ),
         }}
       />
@@ -51,18 +51,18 @@ export default function TabsScreen() {
         name="Ticket"
         component={TicketScreen}
         options={{
-          tabBarIcon: ({ color }) => (
-            <Entypo name="ticket" size={30} color={color} />
+          tabBarIcon: () => (
+            <Entypo name="ticket" size={32} color={"rgba(239, 71, 96, 1)"} />
           ),
         }}
       />
 
       <Tab.Screen 
-        name="Configurações"
+        name="Perfil"
         component={PerfilScreen}
         options={{
-          tabBarIcon: ({ color }) => (
-            <Ionicons name="settings-outline" size={30} color={color} />
+          tabBarIcon: () => (
+            <Ionicons name="settings-outline" size={32} color={"rgba(239, 71, 96, 1)"} />
           ),
         }}
       />

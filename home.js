@@ -1,4 +1,5 @@
 import { Text, TouchableOpacity, View, FlatList } from 'react-native';
+import { useState } from 'react';
 import styles from './styles'; // importa os estilos de outro arquivo
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import Foundation from '@expo/vector-icons/Foundation';
@@ -12,6 +13,13 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 // const comidas = ['Doce gatinho', 'Kalzones']
 // const sucos = ['Água', 'Sucos']
 const alimentos = ['Doce gatinho', 'brigadeiro', 'Kalzone de frango', 'Kalzone de carne', 'Pizza', 'Água', 'suco de uva', 'suco de maçã', 'suco de laranja']
+// const [saldoAtual, setSaldoAtual] = useState(0);
+
+// function atualizarSaldo() {
+//   setSaldoAtual(180);
+// }
+
+
 
 export default function HomeScreen({ navigation }) {
 
@@ -23,7 +31,7 @@ export default function HomeScreen({ navigation }) {
 <>
   <SafeAreaView style={styles.tudo}>
 
-    <View style={styles.barraNoCantoSuperior}>
+    {/* <View style={styles.barraNoCantoSuperior}>
 
         <TouchableOpacity style={styles.bolaDePerfilBotao}
       onPress={() => navigation.navigate("Configurações")}>
@@ -31,47 +39,31 @@ export default function HomeScreen({ navigation }) {
     </TouchableOpacity>
 
     <View style={styles.boasVindasFundo}>
-    <Text style={styles.boasVindas}>Bem Vindo!!!</Text>
+    <Text style={styles.boasVindas}>Bem Vindo!!!</Text> */}
     {/* <Text>{transporteTeste}</Text> */}
-    </View>
+    {/* </View> */}
 
-    </View>
+    {/* </View> */}
 
     <Text style={styles.textoPromocoes}>Promoções e cárdapio do dia</Text>
+    {/* <Text style={styles.textoPromocoes}>{saldoAtual}</Text> */}
 
-    <FlatList
-      data={alimentos}
-      keyExtractor={(item, alimento) => alimento.toString()}
-      renderItem={({ item }) => ( 
-      <View style={styles.listaDeAlimentos}>
-        <Text>{item}</Text>
-      </View>
-      )}
-    />
 
-  {/*<View style={styles.barraNoCantoInferior}>
+<FlatList style={styles.caixaDeAlimentos}
+  data={alimentos}
+  keyExtractor={(alimento) => alimento.toString()}
+  renderItem={({ item }) => (
+          <TouchableOpacity style={styles.botaoDeAlimentos}>
+    <View style={styles.listaDeAlimentos}>
+      <Text>{item}</Text>
+    </View>
+          </TouchableOpacity>
+  )}
+  showsVerticalScrollIndicator={false} // serve para remover a barrinha ao lado da lista
+/>
 
-  <TouchableOpacity style={styles.icones1}
-      onPress={() => navigation.navigate("Home")}>
-         <FontAwesome6 name="house" size={34} color="black" style={styles.icones1}/>
-    </TouchableOpacity>
-
-    <TouchableOpacity style={styles.icones1}
-      onPress={() => navigation.navigate("Loja")}>
-      <Foundation name="shopping-cart" size={40} color="black" style={styles.icones1}/>    
-    </TouchableOpacity>
-
-    <TouchableOpacity style={styles.icones1}
-      onPress={() => navigation.navigate("Ticket")}>
-      <Entypo name="ticket" size={36} color="black" style={styles.icones1}/>
-    </TouchableOpacity>
-
-    <TouchableOpacity style={styles.icones1}
-      onPress={() => navigation.navigate("Perfil")}>
-      <Ionicons name="settings-outline" size={36} color="black" style={styles.icones1}/>
-    </TouchableOpacity>
     
-  </View> */}
+
   </SafeAreaView>
   </>
   );

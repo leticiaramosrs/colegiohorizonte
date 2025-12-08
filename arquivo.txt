@@ -147,3 +147,52 @@ export default function Carrinho() {
     </>
   );
 }
+===============================================================
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import HomeScreen from './HomeScreen'; // Crie este arquivo
+import ProfileScreen from './ProfileScreen'; // Crie este arquivo
+
+const Drawer = createDrawerNavigator();
+
+function RootNavigator() {
+  return (
+    <Drawer.Navigator initialRouteName="Home">
+      <Drawer.Screen name="Home" component={HomeScreen} />
+      <Drawer.Screen name="Profile" component={ProfileScreen} />
+      {/* Adicione mais telas aqui */}
+    </Drawer.Navigator>
+  );
+}
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <RootNavigator />
+    </NavigationContainer>
+  );
+}
+===
+import React from 'react';
+import { View, Text, Button, StyleSheet } from 'react-native';
+
+function HomeScreen({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <Text>Tela Inicial</Text>
+      {/* Botão para abrir o menu lateral */}
+      <Button
+        onPress={() => navigation.openDrawer()}
+        title="Abrir Menu"
+      />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: { flex: 1, alignItems: 'center', justifyContent: 'center' },
+});
+
+export default HomeScreen;
+==================================

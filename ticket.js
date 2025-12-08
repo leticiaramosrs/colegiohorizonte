@@ -137,7 +137,7 @@ const receber = async () => {
 
       <TouchableOpacity></TouchableOpacity>
 
-      <View style={styles.barraNoCantoSuperior}>
+      {/* <View style={styles.barraNoCantoSuperior}>
         <TouchableOpacity
           style={styles.bolaDePerfilBotao}
           onPress={() => navigation.navigate("Perfil")}>
@@ -154,7 +154,7 @@ const receber = async () => {
           style={styles.bag}
           onPress={() => navigation.navigate("Carrinho")}>
         </TouchableOpacity>
-      </View>
+      </View> */}
 
     </View>
   );

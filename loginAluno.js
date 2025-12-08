@@ -35,7 +35,7 @@ export default function LoginAlunoScreen({ navigation }) {
       }
 
   return (
-    <View style={styles.tudo}>
+    <View style={styles.tudo2}>
     <View style={styles.tudomenor}>
 
     <View style={styles.atraslogin}>

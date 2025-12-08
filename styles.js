@@ -13,8 +13,14 @@ export default StyleSheet.create({
 //=============================================================
 
   tudo: {
-    backgroundColor: "rgb(255, 255, 255)",
+    backgroundColor: "rgba(255, 218, 218, 1)",
     // backgroundColor: "rgb(240, 240, 240)",
+    flex: 1,
+    alignItems: 'center',
+  },
+
+    tudo2: {
+    backgroundColor: "rgba(255, 255, 255, 1)",
     flex: 1,
     alignItems: 'center',
   },
@@ -45,6 +51,16 @@ export default StyleSheet.create({
     color: "white",
     fontSize: 19,
     fontFamily: "bold",
+  },
+
+  botaoDeAlimentos: {
+    alignItems: "center",
+    justifyContent: "center",
+    width: 400,
+    height: 80,
+    borderWidth: 1,
+    margin: 3,
+    borderRadius: 20,
   },
 
   //============================================================= 
@@ -118,12 +134,12 @@ export default StyleSheet.create({
   },
 
   textoPromocoes: {
-    fontSize: 27,
+    fontSize: 34,
     // fontStyle: 'italic',
     fontWeight: 'bold',
     textAlign: 'center',
     color:"rgb(244, 11, 93)",
-    top: 100,
+    top: 10,
   },
 
   textocarrinho: {
@@ -331,15 +347,22 @@ export default StyleSheet.create({
 
   
   listaDeAlimentos: {
-    top: 110,
-    justifyContent:'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     width: 400,
     height: 80,
-    backgroundColor: 'gray',
+    backgroundColor:"rgb(255, 170, 198)",
     borderWidth: 1,
-    margin: 2,
+    margin: 3,
     borderRadius: 20,
+    showsVerticalScrollIndicator:false
+  },
+
+  caixaDeAlimentos: {
+    position: 'absolute',
+    top: 70,
+    width: 410,
+    height: 600,
   },
 }
 );

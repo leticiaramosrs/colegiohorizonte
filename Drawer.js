@@ -1,5 +1,5 @@
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import PerfilAluno from "./PerfilAluno";
+import PerfilScreen from "./Perfil";
 
 
 
@@ -9,11 +9,11 @@ export default function AlunoDrawer({navigation}){
   return (
     <Drawer.Navigator
       screenOptions={{
-        headerShown: true,
+        headerShown: false,
         drawerType: "front",
       }}
     >
-      <Drawer.Screen name="PerfilAluno" component={PerfilAluno} />
+      <Drawer.Screen name="Perfil" component={PerfilScreen}/>
     
     </Drawer.Navigator>
     

@@ -12,17 +12,6 @@ export default function LojaScreen({ navigation }) {
 
       </TouchableOpacity>
 
-    <View style={styles.barraNoCantoSuperior}>
-
-    <TouchableOpacity style={styles.bolaDePerfilBotao}
-    onPress={() => navigation.navigate("Perfil")}>
-    <Ionicons name="person-circle" size={60} color="pink" style={styles.bolaDePerfilSimbolo} />
-    </TouchableOpacity>
-    <TouchableOpacity style={styles.bolaDePerfilBotao}
-    onPress={() => navigation.navigate("Usuarios")}>
-    <Ionicons name="person-circle" size={60} color="pink" style={styles.bolaDePerfilSimbolo} />
-    </TouchableOpacity>
-
     <TouchableOpacity style={styles.bag}
     onPress={() => navigation.navigate("Carrinho")}>
     <Ionicons name="bag" size={50} color="white" />
@@ -30,8 +19,6 @@ export default function LojaScreen({ navigation }) {
 
     </View>
 
-   
-  </View>
 
 
   );
