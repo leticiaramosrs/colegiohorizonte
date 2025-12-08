@@ -9,7 +9,7 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
 
 //=============================================================
-// Containers principais
+// Containers / Caixas principais
 //=============================================================
 
   tudo: {
@@ -19,22 +19,117 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
 
-    tudo2: {
+  tudo2: {
     backgroundColor: "rgba(255, 255, 255, 1)",
-    flex: 1,
     alignItems: 'center',
+    flex: 1,
   },
 
   tudomenor: {
     flex: 1,
-    // backgroundColor: "rgb(253, 206, 222)",
+    width: 400,
+    height: 800,
     alignItems: 'center',
+    marginTop: 100,
+  },
+
+  tudomenorHome: {
+    flex: 1,
+    width: 400,
     justifyContent: 'center',
-    marginTop: -100,
+    height: 800,
+    alignItems: 'center',
+    // marginTop: 100,
+    textAlign: 'center',
+    backgroundColor: "rgba(255, 218, 218, 1)",
+    shadowColor: "rgb(244, 11, 93)",
+    shadowRadius: 10,
+    backgroundColor: "rgb(253, 206, 222)",
+    flex: 1,
+    alignItems: 'center',
+  },
+  
+  tudomenor2: {
+    flex: 1,
+    width: 400,
+    height: 800,
+    shadowColor: "rgb(244, 11, 93)",
+    shadowRadius: 10,
+    backgroundColor: "rgb(253, 206, 222)",
+    alignItems: 'center',
+  },
+
+    textoBotaoComprar: {
+    color: "white",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  
+  produtocaixa: {
+    backgroundColor:'pink',
+    border: 1,
+  },
+
+  caixahome: {
+    width: 500,
+    borderRadius: 30,
+    top: 130,
+    margin: 20,
+    height: 150,
+    backgroundColor: "rgb(206, 206, 206)",
+    color: 'black',
+    borderWidth: 1,
+    borderColor: "rgb(148, 147, 147)",
+  },
+
+  caixahome2: {
+    height: 100,
+    width: 150,
+    backgroundColor: "rgb(168, 168, 168)",
+    borderRadius: 50,
+    right: -30,
+    top: 5,
+    borderWidth: 1,
+    borderColor: "rgb(136, 136, 136)",
+
+  },
+
+  // boasVindasFundo: {
+  //   textAlign: 'center',
+  //   alignItems: 'center',
+  //   backgroundColor:"rgb(255, 170, 198)",
+  //   width: 250,
+  //   height: 50,
+  //   position: "absolute",
+  //   borderRadius: 100,
+  // },
+
+  
+  listaDeAlimentos: {
+    justifyContent: "center",
+    alignItems: "center",
+    width: 400,
+    height: 80,
+    backgroundColor:"rgb(255, 170, 198)",
+    borderWidth: 1,
+    margin: 3,
+    borderRadius: 20,
+    color: "rgb(244, 11, 93)",
+    borderColor: "rgb(244, 11, 93)",
+    shadowColor: "rgb(244, 11, 93)",
+    shadowRadius: 3,
+    showsVerticalScrollIndicator:false
+  },
+
+  caixaDeAlimentos: {
+    position: 'absolute',
+    top: 70,
+    width: 410,
+    height: 600,
   },
 
 //============================================================= 
-// Botões
+// Botões e Textos de cada botão
 //============================================================= 
 
   botaozinho: {
@@ -53,8 +148,10 @@ export default StyleSheet.create({
     borderWidth: 1,
     borderRadius: 30,
     padding: 10,
-    width: 330,
-    margin: 5,
+    width: 300,
+
+    height: 45,
+    marginTop: 5,
   },
 
   botaoSair: {
@@ -74,13 +171,6 @@ export default StyleSheet.create({
     margin: 5,
   },
 
-  textodobotaozinho: {
-    textAlign: "center",
-    color: "white",
-    fontSize: 19,
-    fontFamily: "bold",
-  },
-
   botaoDeAlimentos: {
     alignItems: "center",
     justifyContent: "center",
@@ -92,11 +182,25 @@ export default StyleSheet.create({
     borderColor: "rgb(244, 11, 93)",
   },
 
-  //============================================================= 
-  // Inputs
-  //============================================================= 
+//============================================================= 
+// Inputs
+//============================================================= 
 
   input1: {
+    // fontStyle: 'italic',
+    backgroundColor: "rgb(255, 242, 249)",
+    borderColor: "rgb(244, 11, 93)",
+    borderWidth: 1,
+    borderRadius: 30,
+    padding: 10,
+    width: 330,
+    margin: 5,
+    color: "rgb(244, 11, 93)",
+    fontSize: 16,
+    fontFamily: "bold",
+  },
+
+    input2: {
     // fontStyle: 'italic',
     backgroundColor: "rgb(255, 242, 249)",
     borderColor: "rgb(244, 11, 93)",
@@ -115,9 +219,9 @@ export default StyleSheet.create({
     borderColor: "rgb(0, 0, 0)",
   },
 
-  //============================================================= 
-  // Textos
-  //============================================================= 
+//============================================================= 
+// Textos
+//============================================================= 
 
   texto: {
     fontSize: 18,
@@ -133,6 +237,19 @@ export default StyleSheet.create({
     fontFamily: "bold",
   },
 
+    textodobotaozinho: {
+    textAlign: "center",
+    color: "white",
+    fontSize: 19,
+    fontFamily: "bold",
+  },
+
+  textoDoBotaoDeAdicionarSaldo: {
+    color: "rgb(244, 11, 93)",
+    fontSize: 20,
+    fontFamily: "bold",
+  },
+
   textodecima: {
     // textAlign: "center",
     // fontStyle: 'italic',
@@ -141,14 +258,15 @@ export default StyleSheet.create({
     fontFamily: "bold",
   },
 
-  boasVindas: {
+  textodeboasvindas: {
     fontSize: 27,
     position: "absolute",
+    top: 190,
     // fontStyle: 'italic',
     fontWeight: 'bold',
     textAlign: 'center',
     color:"rgb(244, 11, 93)",
-    width: 350,
+    width: 400,
     height: 50,
   },
 
@@ -189,6 +307,7 @@ export default StyleSheet.create({
      fontStyle: 'italic',
      fontWeight: 'bold',
   },
+
   Textocarrinho1: {
     fontSize: 25,
     color: 'white',
@@ -205,9 +324,9 @@ export default StyleSheet.create({
    
   },
 
-  //============================================================= 
-  // Ícones
-  //============================================================= 
+//============================================================= 
+// Ícones
+//============================================================= 
 
   icones1: {
     color: "rgb(255, 255, 255)",
@@ -247,9 +366,9 @@ export default StyleSheet.create({
     
   },
 
-  //============================================================= 
-  // Elementos gráficos
-  //============================================================= 
+//============================================================= 
+// Elementos gráficos
+//============================================================= 
 
   logo: {
     backgroundColor: "rgb(255, 255, 255)",
@@ -272,9 +391,9 @@ export default StyleSheet.create({
   //   borderColor: "rgb(244, 11, 93)",
   // },
 
-  //============================================================= 
-  // Barras
-  //============================================================= 
+//============================================================= 
+// Barras
+//============================================================= 
 
   barraNoCantoInferior: {
     flex: 'container',
@@ -335,76 +454,6 @@ export default StyleSheet.create({
     paddingHorizontal: 14,
     borderRadius: 15,
   },
-  
-  textoBotaoComprar: {
-    color: "white",
-    fontSize: 16,
-    fontWeight: "bold",
-  },
-  
-  produtocaixa: {
-    backgroundColor:'pink',
-    border: 1,
-    
-  },
 
-  caixahome: {
-    width: 500,
-    borderRadius: 30,
-    top: 130,
-    margin: 20,
-    height: 150,
-    backgroundColor: "rgb(206, 206, 206)",
-    color: 'black',
-    borderWidth: 1,
-    borderColor: "rgb(148, 147, 147)",
-  },
-
-  caixahome2: {
-    height: 100,
-    width: 150,
-    backgroundColor: "rgb(168, 168, 168)",
-    borderRadius: 50,
-    right: -30,
-    top: 5,
-    justifyContent: 'center',
-    borderWidth: 1,
-    borderColor: "rgb(136, 136, 136)",
-
-  },
-
-  boasVindasFundo: {
-    textAlign: 'center',
-    alignItems: 'center',
-    backgroundColor:"rgb(255, 170, 198)",
-    width: 250,
-    height: 50,
-    position: "absolute",
-    borderRadius: 100,
-  },
-
-  
-  listaDeAlimentos: {
-    justifyContent: "center",
-    alignItems: "center",
-    width: 400,
-    height: 80,
-    backgroundColor:"rgb(255, 170, 198)",
-    borderWidth: 1,
-    margin: 3,
-    borderRadius: 20,
-    color: "rgb(244, 11, 93)",
-    borderColor: "rgb(244, 11, 93)",
-    shadowColor: "rgb(244, 11, 93)",
-    shadowRadius: 3,
-    showsVerticalScrollIndicator:false
-  },
-
-  caixaDeAlimentos: {
-    position: 'absolute',
-    top: 70,
-    width: 410,
-    height: 600,
-  },
 }
 );
