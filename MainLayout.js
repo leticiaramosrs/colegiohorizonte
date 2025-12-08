@@ -31,44 +31,45 @@ function TopTabsWithMenu({ navigation }) {
     drawerLabelStyle: {
       fontSize: 18,
       fontWeight: "bold",
-      color: "black",
+      color: "rgb(244, 11, 93)",
     },
 
 
     headerStyle: {
       backgroundColor: "pink",
+      shadowColor: "rgb(244, 11, 93)",
+      shadowRadius: 9,
     },
 
-    headerTintColor: "black",
+    headerTintColor:  "rgb(244, 11, 93)", // cor do texto e dos 3 traços na barra superior
     
   }}
 >
 
-      <TopTab.Screen // o que estiver aq vai aparecer como uma tela separada
-
-        name="Menu"
+      <TopTab.Screen // o que estiver aq vai aparecer como uma tela e um botão para abrir uma barra para outras telas
+        name="Home"
           component={Tabs} 
             options={{ tabBarIcon: () => (
             <TouchableOpacity onPress={() => navigation.openDrawer()}>
-              <Ionicons name="menu" size={28} color="black" />
+              <Ionicons name="menu" size={28} color="rgb(244, 11, 93)"/>
             </TouchableOpacity>
           )}}/>
 
-      <TopTab.Screen // o que estiver aq vai aparecer como uma tela separada
+      <TopTab.Screen // o que estiver aq vai aparecer como uma tela e um botão para abrir uma barra para outras telas
         name="Perfil"
           component={PerfilScreen} 
             options={{ tabBarIcon: () => (
             <TouchableOpacity onPress={() => navigation.openDrawer()}>
-              <Ionicons name="menu" size={28} color="black" />
+              <Ionicons name="menu" size={28} color="rgb(244, 11, 93)" />
             </TouchableOpacity>
           )}}/>
 
-      <TopTab.Screen // o que estiver aq vai aparecer como uma tela separada
+      <TopTab.Screen // o que estiver aq vai aparecer como uma tela e um botão para abrir uma barra para outras telas
         name="Carrinho"
           component={CarrinhoScreen} 
             options={{ tabBarIcon: () => (
             <TouchableOpacity onPress={() => navigation.openDrawer()}>
-              <Ionicons name="menu" size={28} color="black" />
+              <Ionicons name="menu" size={28} color="rgb(244, 11, 93)" />
             </TouchableOpacity>
           )}}/>
 

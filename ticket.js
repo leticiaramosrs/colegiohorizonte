@@ -118,7 +118,7 @@ const receber = async () => {
         </TouchableOpacity>
   
         {!podeReceber && (
-          <Text style={{ fontSize: 30, fontWeight: 'bold', marginTop: 140 }}>
+          <Text style={{ fontSize: 30, fontWeight: 'bold', marginTop: 50 }}>
             {formatar(restante)}
           </Text>
         )}
@@ -136,25 +136,6 @@ const receber = async () => {
       <TicketDiario />
 
       <TouchableOpacity></TouchableOpacity>
-
-      {/* <View style={styles.barraNoCantoSuperior}>
-        <TouchableOpacity
-          style={styles.bolaDePerfilBotao}
-          onPress={() => navigation.navigate("Perfil")}>
-          <Ionicons name="person-circle" size={60} color="pink" style={styles.bolaDePerfilSimbolo} />
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={styles.bolaDePerfilBotao}
-          onPress={() => navigation.navigate("Usuarios")}>
-          <Ionicons name="person-circle" size={60} color="pink" style={styles.bolaDePerfilSimbolo} />
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={styles.bag}
-          onPress={() => navigation.navigate("Carrinho")}>
-        </TouchableOpacity>
-      </View> */}
 
     </View>
   );

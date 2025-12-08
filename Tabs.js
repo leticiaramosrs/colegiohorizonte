@@ -11,7 +11,7 @@ import Entypo from '@expo/vector-icons/Entypo';
 import HomeScreen from './home';
 import LojaScreen from './loja';
 import TicketScreen from './ticket';
-import PerfilScreen from './PerfilAluno';
+import ConfirguracoesScreen from './configuracoes';
 
 const Tab = createBottomTabNavigator();
 
@@ -23,7 +23,11 @@ export default function TabsScreen() {
       screenOptions={{
       tabBarShowLabel: false,
       headerShown: false,
-      tabBarStyle: { backgroundColor: 'pink', height: 70 },
+      tabBarStyle: { 
+      backgroundColor: 'pink',
+      height: 70,      
+      shadowColor: "rgb(244, 11, 93)",
+      shadowRadius: 9, },
       }}
     >
 
@@ -58,8 +62,8 @@ export default function TabsScreen() {
       />
 
       <Tab.Screen 
-        name="Perfil"
-        component={PerfilScreen}
+        name="Configuracoes"
+        component={ConfirguracoesScreen}
         options={{
           tabBarIcon: () => (
             <Ionicons name="settings-outline" size={32} color={"rgba(239, 71, 96, 1)"} />

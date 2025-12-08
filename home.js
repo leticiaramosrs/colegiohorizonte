@@ -8,12 +8,8 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { levaUserContext } from "./UserContext";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { TextInput } from 'react-native-gesture-handler';
 
-
-// const comidas = ['Doce gatinho', 'Kalzones']
-// const sucos = ['Água', 'Sucos']
-const alimentos = ['Doce gatinho', 'brigadeiro', 'Kalzone de frango', 'Kalzone de carne', 'Pizza', 'Água', 'suco de uva', 'suco de maçã', 'suco de laranja']
-// const [saldoAtual, setSaldoAtual] = useState(0);
 
 // function atualizarSaldo() {
 //   setSaldoAtual(180);
@@ -22,50 +18,35 @@ const alimentos = ['Doce gatinho', 'brigadeiro', 'Kalzone de frango', 'Kalzone d
 
 
 export default function HomeScreen({ navigation }) {
-
   const { usuarioAluno, usuarioAdmin } = levaUserContext();
   const nome = usuarioAluno.nomeAluno || usuarioAdmin.nomeAdmin;
-  // const { transporteTeste } = levaUserContext(); // Teste para ver como a passagem de informações funciona
+
+    const [saldoAtual, setSaldoAtual] = useState(0);
+    const [saldoDigitado, setSaldoDigitado] = useState();
 
   return (
-<>
-  <SafeAreaView style={styles.tudo}>
-
-    {/* <View style={styles.barraNoCantoSuperior}>
-
-        <TouchableOpacity style={styles.bolaDePerfilBotao}
-      onPress={() => navigation.navigate("Configurações")}>
-          <Ionicons name="person-circle" size={60} color="pink" style={styles.bolaDePerfilSimbolo} />
+    <View style={styles.tudo}>
+      <Text style={styles.textoPromocoes}> Bem-vindo!!! {"\n"} Seu saldo atual é de: {saldoAtual} reais </Text>
+      <TextInput
+      placeholder="Digite o valor que quer adicionar gratuitamente"
+      value={saldoDigitado}
+      onChangeText={setSaldoDigitado}
+      style={styles.input1}
+      />
+    <TouchableOpacity  style={styles.botaodeAdicionar}
+      onPress={() => {
+        
+        const valor = parseFloat(saldoDigitado); // para reais e centavos
+        if (!isNaN(valor)) { // só permitirá se for um número
+          setSaldoAtual(saldoAtual + valor); // soma o saldo atual com o valor digitado
+          setSaldoDigitado(""); // Some com o valor digitado dps de adicionado
+        }
+      }}
+    >
+      <Text>Adicionar saldo</Text>
     </TouchableOpacity>
-
-    <View style={styles.boasVindasFundo}>
-    <Text style={styles.boasVindas}>Bem Vindo!!!</Text> */}
-    {/* <Text>{transporteTeste}</Text> */}
-    {/* </View> */}
-
-    {/* </View> */}
-
-    <Text style={styles.textoPromocoes}>Promoções e cárdapio do dia</Text>
-    {/* <Text style={styles.textoPromocoes}>{saldoAtual}</Text> */}
-
-
-<FlatList style={styles.caixaDeAlimentos}
-  data={alimentos}
-  keyExtractor={(alimento) => alimento.toString()}
-  renderItem={({ item }) => (
-          <TouchableOpacity style={styles.botaoDeAlimentos}>
-    <View style={styles.listaDeAlimentos}>
-      <Text>{item}</Text>
     </View>
-          </TouchableOpacity>
-  )}
-  showsVerticalScrollIndicator={false} // serve para remover a barrinha ao lado da lista
-/>
-
     
-
-  </SafeAreaView>
-  </>
   );
 }
 

@@ -46,6 +46,34 @@ export default StyleSheet.create({
     margin: 5,
   },
 
+  botaodeAdicionar: {
+    alignItems: "center",
+    backgroundColor: "rgb(255, 242, 249)",
+    borderColor: "rgb(244, 11, 93)",
+    borderWidth: 1,
+    borderRadius: 30,
+    padding: 10,
+    width: 330,
+    margin: 5,
+  },
+
+  botaoSair: {
+    alignItems: "center",
+    justifyContent: "center",
+    top: 300,
+    width: 340,
+    height: 65,
+    borderColor: "rgba(255, 0, 0, 1)",
+    shadowColor: "rgba(255, 0, 0, 1)",
+    shadowRadius: 5,
+    borderWidth: 1,
+    color: "rgba(255, 0, 0, 1)",
+    backgroundColor: "rgba(219, 27, 27, 0.53)",
+    borderRadius: 30,
+    padding: 10,
+    margin: 5,
+  },
+
   textodobotaozinho: {
     textAlign: "center",
     color: "white",
@@ -61,6 +89,7 @@ export default StyleSheet.create({
     borderWidth: 1,
     margin: 3,
     borderRadius: 20,
+    borderColor: "rgb(244, 11, 93)",
   },
 
   //============================================================= 
@@ -98,6 +127,12 @@ export default StyleSheet.create({
     // fontStyle: 'italic',
   },
 
+  textolistaDeAlimentos: {
+    color: "rgb(244, 11, 93)",
+    fontSize: 23,
+    fontFamily: "bold",
+  },
+
   textodecima: {
     // textAlign: "center",
     // fontStyle: 'italic',
@@ -113,7 +148,7 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     color:"rgb(244, 11, 93)",
-    width: 250,
+    width: 350,
     height: 50,
   },
 
@@ -134,12 +169,15 @@ export default StyleSheet.create({
   },
 
   textoPromocoes: {
-    fontSize: 34,
+    fontSize: 38,
     // fontStyle: 'italic',
     fontWeight: 'bold',
     textAlign: 'center',
-    color:"rgb(244, 11, 93)",
+    alignItems: 'center',
+    color: "rgb(244, 11, 93)",
+    marginBottom: 10,
     top: 10,
+    fontFamily: "bold",
   },
 
   textocarrinho: {
@@ -195,7 +233,6 @@ export default StyleSheet.create({
   color: 'pink',
   position: 'absolute',
   borderRadius: 2000,
-
   borderColor: 'black',
   top: 10,
   left: 10,
@@ -304,6 +341,7 @@ export default StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
   },
+  
   produtocaixa: {
     backgroundColor:'pink',
     border: 1,
@@ -355,6 +393,10 @@ export default StyleSheet.create({
     borderWidth: 1,
     margin: 3,
     borderRadius: 20,
+    color: "rgb(244, 11, 93)",
+    borderColor: "rgb(244, 11, 93)",
+    shadowColor: "rgb(244, 11, 93)",
+    shadowRadius: 3,
     showsVerticalScrollIndicator:false
   },
 
